@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+	
+	<TextView
+		android:id="@+id/textViewPostMatch"
+        android:layout_alignParentTop="true"
+		style="@style/AppTheme.Text.Heading"
+		android:text="@string/heading_comments"/>
+
+    <LinearLayout
+        android:layout_below="@id/textViewPostMatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/editTextComments"
+            android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:minLines="6"
+            android:inputType="textMultiLine" />
+    </LinearLayout>
+
+</RelativeLayout>

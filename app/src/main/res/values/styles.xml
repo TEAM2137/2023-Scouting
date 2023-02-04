@@ -1,0 +1,168 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Red" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimaryRed</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkRed</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Blue" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimaryBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBlue</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--<style name="AppTheme.Red.Auto" parent="AppTheme.Red">-->
+        <!--<item name="colorPrimary">@color/colorPrimaryRed</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDarkRed</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <!--<item name="android:colorBackground">@color/colorAuto</item>-->
+    <!--</style>-->
+
+    <!--<style name="AppTheme.Red.Teleop" parent="AppTheme.Red">-->
+        <!--<item name="colorPrimary">@color/colorPrimaryRed</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDarkRed</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <!--<item name="android:colorBackground">@color/colorTeleop</item>-->
+    <!--</style>-->
+
+    <!--<style name="AppTheme.Blue.Auto" parent="AppTheme.Blue">-->
+        <!--<item name="colorPrimary">@color/colorPrimaryBlue</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDarkBlue</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <!--<item name="android:colorBackground">@color/colorAuto</item>-->
+    <!--</style>-->
+
+    <!--<style name="AppTheme.Blue.Teleop" parent="AppTheme.Blue">-->
+        <!--<item name="colorPrimary">@color/colorPrimaryBlue</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDarkBlue</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <!--<item name="android:colorBackground">@color/colorTeleop</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme.Text" parent="TextAppearance.AppCompat">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColorHighlight">@android:color/transparent</item>
+        <item name="android:textColorHint">@android:color/transparent</item>
+        <item name="android:textColorLink">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_background_round</item>
+        <!--<item name="android:textSize">24sp</item>-->
+        <item name="android:textColor">#FFFFFF</item>
+        <!--<item name="android:textAllCaps">true</item>-->
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColorHighlight">@android:color/transparent</item>
+        <item name="android:textColorHint">@android:color/transparent</item>
+        <item name="android:textColorLink">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.Button.Hatch" parent="AppTheme.Button">
+        <item name="android:background">@drawable/button_background_hatch_round</item>
+        <!--<item name="android:textColor">#444444</item>-->
+    </style>
+
+    <style name="AppTheme.Button.Cargo" parent="AppTheme.Button">
+        <item name="android:background">@drawable/button_background_cargo_round</item>
+    </style>
+
+    <style name="AppTheme.Button.Long" parent="AppTheme.Button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="AppTheme.Button.Long.Blue" parent="AppTheme.Button.Long">
+        <item name="android:background">@drawable/button_background_round_blue</item>
+    </style>
+
+    <style name="AppTheme.Button.Long.Red" parent="AppTheme.Button.Long">
+        <item name="android:background">@drawable/button_background_round_red</item>
+    </style>
+
+    <style name="AppTheme.Button.Square" parent="AppTheme.Button">
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_width">120dp</item>
+    </style>
+
+    <style name="AppTheme.Button.Square.DarkGrey" parent="AppTheme.Button.Square">
+        <item name="android:background">@drawable/button_background_round_select_dark_grey</item>
+    </style>
+
+    <style name="AppTheme.Button.Rectangle" parent="AppTheme.Button">
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_width">180dp</item>
+    </style>
+
+    <style name="AppTheme.Button.Rectangle.DarkGrey" parent="AppTheme.Button.Rectangle">
+        <item name="android:background">@drawable/button_background_round_select_dark_grey</item>
+    </style>
+
+    <style name="AppTheme.Button.Rectangle.Thin" parent="AppTheme.Button.Rectangle">
+        <item name="android:layout_width">160dp</item>
+    </style>
+
+    <style name="AppTheme.Button.Rectangle.Thin.DarkGrey" parent="AppTheme.Button.Rectangle">
+        <item name="android:background">@drawable/button_background_round_select_dark_grey</item>
+    </style>
+
+    <style name="AppTheme.Button.Rectangle.Skinny" parent="AppTheme.Button.Rectangle">
+        <item name="android:layout_width">140dp</item>
+    </style>
+
+    <style name="AppTheme.Button.Rectangle.Skinny.DarkGrey" parent="AppTheme.Button.Rectangle.Skinny">
+        <item name="android:background">@drawable/button_background_round_select_dark_grey</item>
+    </style>
+
+    <style name="AppTheme.Button.Rectangle.Fat" parent="AppTheme.Button.Rectangle">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="AppTheme.Text.Heading" parent="AppTheme.Text">
+        <item name="android:textSize">36sp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+
+    <style name="AppTheme.Input.EditText" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:background"></item>
+    </style>
+
+    <style name="AppTheme.Input.Spinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+
+</resources>
