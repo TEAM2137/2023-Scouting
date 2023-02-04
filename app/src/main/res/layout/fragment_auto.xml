@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.team2137.rapidreactscouting.AutoFragment">
+
+    <Button
+        android:id="@+id/buttonAutoTaxi"
+        style="@style/AppTheme.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_taxi" />
+
+    <Space
+        android:id="@+id/spaceAuto1"
+        android:layout_width="2dp"
+        android:layout_height="9dp"
+        android:layout_below="@+id/buttonAutoTaxi"
+        android:layout_weight="1" />
+
+    <View
+        android:id="@+id/dividerAuto1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/spaceAuto1"
+        android:background="#FFFFFF" />
+
+    <Space
+        android:id="@+id/spaceAuto2"
+        android:layout_width="2dp"
+        android:layout_height="9dp"
+        android:layout_below="@+id/dividerAuto1"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/buttonAutoHigh"
+        style="@style/AppTheme.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spaceAuto2"
+        android:text="@string/button_high_goal" />
+
+    <Button
+        android:id="@+id/buttonAutoLow"
+        style="@style/AppTheme.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAutoHigh"
+        android:text="@string/button_low_goal" />
+
+    <Space
+        android:id="@+id/spaceAuto2a"
+        android:layout_width="2dp"
+        android:layout_height="9dp"
+        android:layout_below="@+id/buttonAutoLow"
+        android:layout_weight="1" />
+
+    <View
+        android:id="@+id/dividerAuto2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/spaceAuto2a"
+        android:background="#FFFFFF" />
+
+    <Space
+        android:id="@+id/spaceAuto2b"
+        android:layout_width="2dp"
+        android:layout_height="9dp"
+        android:layout_below="@+id/dividerAuto2"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/buttonAutoMiss"
+        style="@style/AppTheme.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spaceAuto2b"
+        android:text="@string/button_miss" />
+
+</RelativeLayout>

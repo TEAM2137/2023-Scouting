@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryBlue">#003375</color>
+    <color name="colorPrimaryDarkBlue">#003375</color>
+    <color name="colorPrimaryRed">#750000</color>
+    <color name="colorPrimaryDarkRed">#750000</color>
+    <color name="colorAccent">#FFD112</color>
+
+    <color name="colorAuto">#FFFFFF</color>
+    <color name="colorTeleop">#000000</color>
+
+    <color name="button_disabled">#222222</color>
+    <color name="button_off">#999999</color>
+    <color name="button_on">#99CC00</color>
+
+    <color name="button_blue_pressed">#222266</color>
+    <color name="button_blue_focused">#444488</color>
+    <color name="button_blue_default">#444499</color>
+    <color name="button_red_pressed">#662222</color>
+    <color name="button_red_focused">#884444</color>
+    <color name="button_red_default">#994444</color>
+
+    <color name="button_cargo_disabled">#222222</color>
+    <color name="button_cargo_off">#999999</color>
+    <color name="button_cargo_on">#ff8400</color>
+
+    <color name="button_hatch_disabled">#222222</color>
+    <color name="button_hatch_off">#777777</color>
+    <color name="button_hatch_on">#e9d801</color>
+</resources>
