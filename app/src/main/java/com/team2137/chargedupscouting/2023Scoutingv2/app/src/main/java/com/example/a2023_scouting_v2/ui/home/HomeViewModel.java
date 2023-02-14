@@ -10,7 +10,7 @@ public class HomeViewModel extends ViewModel {
 
     public HomeViewModel() {
         mTitle = new MutableLiveData<>();
-        mTitle.setValue("Charged Up Scouting | Blue");
+        mTitle.setValue("(Developer Build) Charged Up Scouting | Blue");
     }
 
     public LiveData<String> getTitle() {

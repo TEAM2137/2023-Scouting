@@ -8,11 +8,11 @@
     tools:context=".ui.home.HomeFragment">
 
     <TextView
-        android:id="@+id/text_auto_top"
+        android:id="@+id/textAutoTop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
@@ -20,176 +20,165 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/topMinusA"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="352dp"
+        android:text="-"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/topScoreTA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
 
     <Button
         android:id="@+id/topPlusA"
-        android:layout_width="260dp"
+        android:layout_width="0dp"
         android:layout_height="130dp"
-        android:layout_marginTop="216dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginEnd="4dp"
+        android:text="+"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/topScoreTA"
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+
+    <Button
+        android:id="@+id/midMinusA"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="504dp"
+        android:text="-"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/midScoreTA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+
+    <Button
+        android:id="@+id/lowPlusA"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="656dp"
         android:layout_marginEnd="8dp"
         android:text="+"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
-
-    <Button
-        android:id="@+id/topMinusA"
-        android:layout_width="260dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="216dp"
-        android:text="-"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toStartOf="@+id/topPlusA"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
-
-    <Button
-        android:id="@+id/midPlusA"
-        android:layout_width="260dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="368dp"
-        android:layout_marginEnd="12dp"
-        android:text="+"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
-
-    <Button
-        android:id="@+id/midMinusA"
-        android:layout_width="260dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="368dp"
-        android:text="-"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toStartOf="@+id/topPlusA"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
-
-    <Button
-        android:id="@+id/lowPlusA"
-        android:layout_width="260dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="520dp"
-        android:layout_marginEnd="12dp"
-        android:text="+"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+        app:layout_constraintStart_toEndOf="@+id/lowScoreTA"
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
 
     <Button
         android:id="@+id/lowMinusA"
-        android:layout_width="260dp"
+        android:layout_width="0dp"
         android:layout_height="130dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="520dp"
+        android:layout_marginTop="656dp"
         android:text="-"
         android:textSize="60sp"
-        app:layout_constraintEnd_toStartOf="@+id/topPlusA"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/lowScoreTA"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
 
     <TextView
         android:id="@+id/topScoreTA"
-        android:layout_width="50dp"
+        android:layout_width="75dp"
         android:layout_height="73dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="376dp"
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
         android:textSize="60sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/midScoreTA"
+        app:layout_constraintEnd_toStartOf="@+id/topPlusA"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/topMinusA"
-        app:layout_constraintStart_toStartOf="@+id/midScoreTA"
-        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
 
     <TextView
         android:id="@+id/midScoreTA"
-        android:layout_width="50dp"
+        android:layout_width="75dp"
         android:layout_height="73dp"
-        android:layout_marginTop="392dp"
+        android:layout_marginTop="528dp"
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
         android:textSize="60sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/lowScoreTA"
-        app:layout_constraintStart_toEndOf="@+id/topMinusA"
-        app:layout_constraintStart_toStartOf="@+id/lowScoreTA"
-        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+        app:layout_constraintEnd_toStartOf="@+id/midPlusA"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/midMinusA"
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
 
     <TextView
         android:id="@+id/lowScoreTA"
-        android:layout_width="50dp"
+        android:layout_width="75dp"
         android:layout_height="73dp"
-        android:layout_marginTop="544dp"
+        android:layout_marginTop="680dp"
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
         android:textSize="60sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/topMinusA"
-        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="226dp"
-        android:layout_height="226dp"
-        android:layout_marginStart="187dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="12dp"
-        android:src="@mipmap/ic_launcher_dark"
-        app:layout_constraintBottom_toTopOf="@+id/text_auto_top"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/lowPlusA"
+        app:layout_constraintStart_toEndOf="@+id/lowMinusA"
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
 
     <Switch
         android:id="@+id/Docked"
         android:layout_width="256dp"
         android:layout_height="44dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="16dp"
         android:text="Docked"
         android:textColor="@color/design_default_color_background"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+        app:layout_constraintTop_toBottomOf="@+id/teamNumberI" />
 
     <Switch
         android:id="@+id/Engaged"
         android:layout_width="166dp"
         android:layout_height="46dp"
-        android:layout_marginStart="216dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="260dp"
         android:text="Engaged"
         android:textColor="@color/design_default_color_background"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leftCommunity" />
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
 
     <Switch
         android:id="@+id/leftCommunity"
         android:layout_width="257dp"
         android:layout_height="50dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="22dp"
         android:text="Left Community"
         android:textColor="@color/design_default_color_background"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+        app:layout_constraintTop_toBottomOf="@+id/teamNumberI" />
+
+    <TextView
+        android:id="@+id/topButtonsText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="412dp"
+        android:text="Low Score"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leftCommunity" />
 
     <TextView
         android:id="@+id/topButtonsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="108dp"
         android:text="High Score"
         android:textColor="@color/design_default_color_background"
@@ -201,7 +190,7 @@
         android:id="@+id/topButtonsText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="260dp"
         android:text="Middle Score"
         android:textColor="@color/design_default_color_background"
@@ -209,16 +198,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/leftCommunity" />
 
-    <TextView
-        android:id="@+id/topButtonsText3"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="412dp"
-        android:text="Low Score"
-        android:textColor="@color/design_default_color_background"
-        android:textSize="16sp"
+        tools:layout_editor_absoluteX="506dp"
+        tools:layout_editor_absoluteY="259dp">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/midPlusA"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="504dp"
+        android:layout_marginEnd="8dp"
+        android:text="+"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/midScoreTA"
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+
+    <EditText
+        android:id="@+id/scoutNameI"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Scout Name"
+        android:inputType="textPersonName"
+        android:textColor="@color/design_default_color_surface"
+        android:textColorHint="#919191"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leftCommunity" />
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+
+    <EditText
+        android:id="@+id/teamNumberI"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Team Number (ex. 2137)"
+        android:inputType="textPersonName"
+        android:textColor="@color/design_default_color_surface"
+        android:textColorHint="#919191"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoutNameI" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

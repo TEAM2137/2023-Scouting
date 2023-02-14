@@ -18,9 +18,7 @@ public class HomeFragment extends Fragment {
     private FragmentAutoBinding binding;
 
     int topCount = 0;
-
     int midCount = 0;
-
     int lowCount = 0;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
