@@ -21,39 +21,111 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/plus1"
+        android:id="@+id/topPlus"
         android:layout_width="260dp"
         android:layout_height="130dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="8dp"
+        android:text="+"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+
+    <Button
+        android:id="@+id/topMinus"
+        android:layout_width="260dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="216dp"
+        android:text="-"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/topPlus"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="260dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="368dp"
         android:layout_marginEnd="12dp"
         android:text="+"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
 
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="260dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="368dp"
+        android:text="-"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/topPlus"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+
+    <Button
+        android:id="@+id/plus2"
+        android:layout_width="260dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginEnd="12dp"
+        android:text="+"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+
+    <Button
+        android:id="@+id/minus2"
+        android:layout_width="260dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="520dp"
+        android:text="-"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/topPlus"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+
     <TextView
-        android:id="@+id/counter1"
+        android:id="@+id/topScoreT"
         android:layout_width="50dp"
         android:layout_height="73dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="240dp"
         android:text="0"
         android:textAlignment="center"
         android:textSize="60sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/minus1"
+        app:layout_constraintStart_toEndOf="@+id/topMinus"
         app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
 
-    <Button
-        android:id="@+id/minus1"
-        android:layout_width="260dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="184dp"
-        android:text="-"
+    <TextView
+        android:id="@+id/midScoreT"
+        android:layout_width="50dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="392dp"
+        android:text="0"
+        android:textAlignment="center"
         android:textSize="60sp"
-        app:layout_constraintEnd_toStartOf="@+id/plus1"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/topMinus"
+        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+
+    <TextView
+        android:id="@+id/lowScoreT"
+        android:layout_width="50dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="544dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/topMinus"
         app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
 
     <ImageView
@@ -67,4 +139,71 @@
         app:layout_constraintBottom_toTopOf="@+id/text_auto_top"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/leftCommunity2"
+        android:layout_width="256dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:text="Docked"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+
+    <Switch
+        android:id="@+id/leftCommunity3"
+        android:layout_width="166dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="46dp"
+        android:text="Engaged"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leftCommunity" />
+
+    <Switch
+        android:id="@+id/leftCommunity"
+        android:layout_width="257dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="36dp"
+        android:text="Left Community"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_auto_top" />
+
+    <TextView
+        android:id="@+id/topButtonsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
+        android:text="High Score"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leftCommunity" />
+
+    <TextView
+        android:id="@+id/topButtonsText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="260dp"
+        android:text="Middle Score"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leftCommunity" />
+
+    <TextView
+        android:id="@+id/topButtonsText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="412dp"
+        android:text="Low Score"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leftCommunity" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
