@@ -237,11 +237,11 @@
 
     <EditText
         android:id="@+id/teamNumberI"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
+        android:layout_width="450dp"
+        android:layout_height="57dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="143dp"
         android:ems="10"
         android:hint="Team Number (ex. 2137)"
         android:inputType="textPersonName"
@@ -250,6 +250,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoutNameI" />
+
+    <Button
+        android:id="@+id/submitInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="21dp"
+        android:text="Submit"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/Docked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/teamNumberI"
         app:layout_constraintTop_toBottomOf="@+id/scoutNameI" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,14 @@
 package com.example.a2023_scouting_v2.ui.home;
 
+import static java.lang.Thread.sleep;
+
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Button;
 
@@ -21,6 +26,9 @@ public class HomeFragment extends Fragment {
     int midCount = 0;
     int lowCount = 0;
 
+    public String scoutName = "";
+    public String teamNum = "";
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         HomeViewModel homeViewModel =
@@ -32,9 +40,15 @@ public class HomeFragment extends Fragment {
         final TextView textView = binding.textAutoTop;
         homeViewModel.getTitle().observe(getViewLifecycleOwner(), textView::setText);
 
+        //Reference the text boxes that keep track of counting
         final TextView topScoreNum = binding.topScoreTA;
         final TextView midScoreNum = binding.midScoreTA;
         final TextView lowScoreNum = binding.lowScoreTA;
+
+        //Info TextEdits and Buttons
+        Button submitInfo = binding.submitInfo;
+        EditText scoutNameI = binding.scoutNameI;
+        EditText teamNumI = binding.teamNumberI;
 
         //Top + & - buttons
         Button topPlusA = binding.topPlusA;
@@ -48,6 +62,17 @@ public class HomeFragment extends Fragment {
         Button lowPlusA = binding.lowPlusA;
         Button lowMinusA = binding.lowMinusA;
 
+        //When the submit button is clicked save the input as a string
+        submitInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                scoutName = scoutNameI.getText().toString();
+                teamNum = teamNumI.getText().toString();
+                System.out.println("Success! Scout name: " + scoutName + ". Team Number: " + teamNum + ".");
+                submitInfo.setText("Success!");
+                submitInfo.setTextSize(17);
+            }
+        });
 
         // Top score button functionality
         topPlusA.setOnClickListener(new View.OnClickListener() {
