@@ -19,6 +19,10 @@ public class HomeFragment extends Fragment {
 
     int topCount = 0;
 
+    int midCount = 0;
+
+    int lowCount = 0;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         HomeViewModel homeViewModel =
@@ -30,11 +34,24 @@ public class HomeFragment extends Fragment {
         final TextView textView = binding.textAutoTop;
         homeViewModel.getTitle().observe(getViewLifecycleOwner(), textView::setText);
 
-        final TextView topScoreNum = binding.topScoreT;
+        final TextView topScoreNum = binding.topScoreTA;
+        final TextView midScoreNum = binding.midScoreTA;
+        final TextView lowScoreNum = binding.lowScoreTA;
 
-        Button topPlusA = binding.topPlus;
-        Button topMinusA = binding.topMinus;
+        //Top + & - buttons
+        Button topPlusA = binding.topPlusA;
+        Button topMinusA = binding.topMinusA;
 
+        //Medium + & - buttons
+        Button midPlusA = binding.midPlusA;
+        Button midMinusA = binding.midMinusA;
+
+        //Low + & - buttons
+        Button lowPlusA = binding.lowPlusA;
+        Button lowMinusA = binding.lowMinusA;
+
+
+        // Top score button functionality
         topPlusA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,6 +78,68 @@ public class HomeFragment extends Fragment {
                     topCount--;
                     topScoreNum.setText("" + topCount);
                     System.out.println(topCount);
+                }
+            }
+        });
+
+        // Mid score button functionality
+        midPlusA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(midCount > 8){
+                    midCount = 0;
+                    midScoreNum.setText("" + midCount);
+                    System.out.println(midCount);
+                } else {
+                    midCount++;
+                    midScoreNum.setText("" + midCount);
+                    System.out.println(midCount);
+                }
+            }
+        });
+
+        midMinusA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(midCount < 1){
+                    midCount = 9;
+                    midScoreNum.setText("" + midCount);
+                    System.out.println(midCount);
+                } else {
+                    midCount--;
+                    midScoreNum.setText("" + midCount);
+                    System.out.println(midCount);
+                }
+            }
+        });
+
+        // Low score button functionality
+        lowPlusA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(lowCount > 8){
+                    lowCount = 0;
+                    lowScoreNum.setText("" + lowCount);
+                    System.out.println(lowCount);
+                } else {
+                    lowCount++;
+                    lowScoreNum.setText("" + lowCount);
+                    System.out.println(lowCount);
+                }
+            }
+        });
+
+        lowMinusA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(lowCount < 1){
+                    lowCount = 9;
+                    lowScoreNum.setText("" + lowCount);
+                    System.out.println(lowCount);
+                } else {
+                    lowCount--;
+                    lowScoreNum.setText("" + lowCount);
+                    System.out.println(lowCount);
                 }
             }
         });
