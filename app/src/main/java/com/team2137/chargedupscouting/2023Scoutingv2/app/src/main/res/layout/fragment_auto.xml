@@ -25,7 +25,7 @@
     <Button
         android:id="@+id/topMinusA"
         android:layout_width="0dp"
-        android:layout_height="130dp"
+        android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="352dp"
         android:text="-"
@@ -37,7 +37,7 @@
     <Button
         android:id="@+id/topPlusA"
         android:layout_width="0dp"
-        android:layout_height="130dp"
+        android:layout_height="100dp"
         android:layout_marginTop="352dp"
         android:layout_marginEnd="4dp"
         android:text="+"
@@ -49,44 +49,44 @@
     <Button
         android:id="@+id/midMinusA"
         android:layout_width="0dp"
-        android:layout_height="130dp"
+        android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="504dp"
+        android:layout_marginTop="20dp"
         android:text="-"
         android:textSize="60sp"
         app:layout_constraintEnd_toStartOf="@+id/midScoreTA"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+        app:layout_constraintTop_toBottomOf="@+id/topMinusA" />
 
     <Button
         android:id="@+id/lowPlusA"
         android:layout_width="0dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="656dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:text="+"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/lowScoreTA"
-        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+        app:layout_constraintTop_toBottomOf="@+id/midPlusA" />
 
     <Button
         android:id="@+id/lowMinusA"
         android:layout_width="0dp"
-        android:layout_height="130dp"
+        android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="656dp"
+        android:layout_marginTop="20dp"
         android:text="-"
         android:textSize="60sp"
         app:layout_constraintEnd_toStartOf="@+id/lowScoreTA"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+        app:layout_constraintTop_toBottomOf="@+id/midMinusA" />
 
     <TextView
         android:id="@+id/topScoreTA"
         android:layout_width="75dp"
         android:layout_height="73dp"
-        android:layout_marginTop="376dp"
+        android:layout_marginTop="10dp"
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
@@ -95,13 +95,13 @@
         app:layout_constraintEnd_toStartOf="@+id/topPlusA"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/topMinusA"
-        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+        app:layout_constraintTop_toTopOf="@+id/topMinusA" />
 
     <TextView
         android:id="@+id/midScoreTA"
         android:layout_width="75dp"
         android:layout_height="73dp"
-        android:layout_marginTop="528dp"
+        android:layout_marginTop="50dp"
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
@@ -110,13 +110,13 @@
         app:layout_constraintEnd_toStartOf="@+id/midPlusA"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/midMinusA"
-        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+        app:layout_constraintTop_toBottomOf="@+id/topScoreTA" />
 
     <TextView
         android:id="@+id/lowScoreTA"
         android:layout_width="75dp"
         android:layout_height="73dp"
-        android:layout_marginTop="680dp"
+        android:layout_marginTop="45dp"
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
@@ -124,7 +124,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/lowPlusA"
         app:layout_constraintStart_toEndOf="@+id/lowMinusA"
-        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+        app:layout_constraintTop_toBottomOf="@+id/midScoreTA" />
 
     <TextView
         android:id="@+id/topButtonsText3"
@@ -180,14 +180,14 @@
     <Button
         android:id="@+id/midPlusA"
         android:layout_width="0dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="504dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:text="+"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/midScoreTA"
-        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+        app:layout_constraintTop_toBottomOf="@+id/topPlusA" />
 
     <EditText
         android:id="@+id/scoutNameI"
@@ -201,42 +201,25 @@
         android:inputType="textPersonName"
         android:textColor="@color/design_default_color_surface"
         android:textColorHint="#919191"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
 
     <EditText
-        android:id="@+id/matchNumber"
+        android:id="@+id/matchNumI"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Match #"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textColor="@color/design_default_color_surface"
         android:textColorHint="#919191"
-        app:layout_constraintBottom_toTopOf="@+id/teamNumberI"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scoutNameI" />
-
-    <EditText
-        android:id="@+id/teamNumberI"
-        android:layout_width="450dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="143dp"
-        android:ems="10"
-        android:hint="Team Number (ex. 2137)"
-        android:inputType="textPersonName"
-        android:textColor="@color/design_default_color_surface"
-        android:textColorHint="#919191"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -247,29 +230,29 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="-55dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="-1dp"
+        android:layout_marginBottom="8dp"
         android:text="Submit"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/teamNumberI"
+        app:layout_constraintBottom_toTopOf="@+id/engaged"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/teamNumberI"
-        app:layout_constraintTop_toBottomOf="@+id/teamNumberI" />
+        app:layout_constraintStart_toEndOf="@+id/teamNumI"
+        app:layout_constraintTop_toBottomOf="@+id/matchNumI" />
 
     <Button
         android:id="@+id/docked"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:text="Docked"
         app:layout_constraintBottom_toTopOf="@+id/leftCommunity"
         app:layout_constraintEnd_toStartOf="@+id/engaged"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teamNumberI" />
+        app:layout_constraintTop_toBottomOf="@+id/matchNumI" />
 
     <Button
         android:id="@+id/engaged"
@@ -283,7 +266,7 @@
         app:layout_constraintBottom_toTopOf="@+id/leftCommunity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/docked"
-        app:layout_constraintTop_toBottomOf="@+id/teamNumberI" />
+        app:layout_constraintTop_toBottomOf="@+id/teamNumI" />
 
     <Button
         android:id="@+id/leftCommunity"
@@ -297,5 +280,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/docked" />
+
+    <Spinner
+        android:id="@+id/teamNumI"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="8dp"
+        android:background="#869299"
+        android:dropDownSelector="@color/design_default_color_background"
+        app:layout_constraintBottom_toTopOf="@+id/docked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matchNumI"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

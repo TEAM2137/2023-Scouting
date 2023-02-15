@@ -3,4 +3,13 @@
     <string name="title_home">Auto</string>
     <string name="title_dashboard">Driver</string>
     <string name="title_notifications">Endgame</string>
+
+    <string-array name="teams">
+        <item>Select a Team</item>
+        <item>1</item>
+        <item>68</item>
+        <item>247</item>
+        <item>314</item>
+        <item>322</item>
+    </string-array>
 </resources>

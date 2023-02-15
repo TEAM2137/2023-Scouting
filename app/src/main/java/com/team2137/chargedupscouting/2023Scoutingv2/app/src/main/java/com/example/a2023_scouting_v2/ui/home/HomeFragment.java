@@ -2,6 +2,7 @@ package com.example.a2023_scouting_v2.ui.home;
 
 import static java.lang.Thread.sleep;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Button;
 
@@ -28,6 +30,8 @@ public class HomeFragment extends Fragment {
 
     public String scoutName = "";
     public String teamNum = "";
+    public String matchNum = "";
+    boolean submitted = false;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -48,7 +52,8 @@ public class HomeFragment extends Fragment {
         //Info TextEdits and Buttons
         Button submitInfo = binding.submitInfo;
         EditText scoutNameI = binding.scoutNameI;
-        EditText teamNumI = binding.teamNumberI;
+        Spinner teamNumI = binding.teamNumI;
+        EditText matchNumI = binding.matchNumI;
 
         //Top + & - buttons
         Button topPlusA = binding.topPlusA;
@@ -62,15 +67,28 @@ public class HomeFragment extends Fragment {
         Button lowPlusA = binding.lowPlusA;
         Button lowMinusA = binding.lowMinusA;
 
+        //If someone goes back to the auto section set the score numbers to what they set earlier
+        if(submitted){
+            submitInfo.setText("Success!");
+            submitInfo.setBackgroundColor(Color.parseColor("#51f542"));
+            submitInfo.setTextSize(17);
+        }
+        topScoreNum.setText("" + topCount);
+        midScoreNum.setText("" + midCount);
+        lowScoreNum.setText("" + lowCount);
+
         //When the submit button is clicked save the input as a string
         submitInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 scoutName = scoutNameI.getText().toString();
-                teamNum = teamNumI.getText().toString();
-                System.out.println("Success! Scout name: " + scoutName + ". Team Number: " + teamNum + ".");
+                teamNum = teamNumI.getSelectedItem().toString();
+                matchNum = matchNumI.getText().toString();
+                System.out.println("Success! Scout name: " + scoutName + "Match Number: " + matchNum + ". Team Number: " + teamNum + ".");
                 submitInfo.setText("Success!");
+                submitInfo.setBackgroundColor(Color.parseColor("#51f542"));
                 submitInfo.setTextSize(17);
+                submitted = true;
             }
         });
 
