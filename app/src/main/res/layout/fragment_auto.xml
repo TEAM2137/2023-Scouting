@@ -1,80 +1,316 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.team2137.chargedupscouting.AutoFragment">
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#323435"
+    tools:context=".ui.home.HomeFragment">
 
-    <Button
-        android:id="@+id/buttonAutoTaxi"
-        style="@style/AppTheme.Button"
+    <TextView
+        android:id="@+id/textAutoTop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/auto_taxi" />
-
-    <Space
-        android:id="@+id/spaceAuto1"
-        android:layout_width="2dp"
-        android:layout_height="9dp"
-        android:layout_below="@+id/buttonAutoTaxi"
-        android:layout_weight="1" />
-
-    <View
-        android:id="@+id/dividerAuto1"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_below="@+id/spaceAuto1"
-        android:background="#FFFFFF" />
-
-    <Space
-        android:id="@+id/spaceAuto2"
-        android:layout_width="2dp"
-        android:layout_height="9dp"
-        android:layout_below="@+id/dividerAuto1"
-        android:layout_weight="1" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonAutoHigh"
-        style="@style/AppTheme.Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/spaceAuto2"
-        android:text="@string/button_high_goal" />
+        android:id="@+id/topMinusA"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="352dp"
+        android:backgroundTint="@color/white"
+        android:text="-"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/topScoreTA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
 
     <Button
-        android:id="@+id/buttonAutoLow"
-        style="@style/AppTheme.Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonAutoHigh"
-        android:text="@string/button_low_goal" />
-
-    <Space
-        android:id="@+id/spaceAuto2a"
-        android:layout_width="2dp"
-        android:layout_height="9dp"
-        android:layout_below="@+id/buttonAutoLow"
-        android:layout_weight="1" />
-
-    <View
-        android:id="@+id/dividerAuto2"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_below="@+id/spaceAuto2a"
-        android:background="#FFFFFF" />
-
-    <Space
-        android:id="@+id/spaceAuto2b"
-        android:layout_width="2dp"
-        android:layout_height="9dp"
-        android:layout_below="@+id/dividerAuto2"
-        android:layout_weight="1" />
+        android:id="@+id/topPlusA"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/white"
+        android:text="+"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/topScoreTA"
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
 
     <Button
-        android:id="@+id/buttonAutoMiss"
-        style="@style/AppTheme.Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/spaceAuto2b"
-        android:text="@string/button_miss" />
+        android:id="@+id/midMinusA"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:text="-"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/midScoreTA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topMinusA" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/lowPlusA"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/white"
+        android:text="+"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lowScoreTA"
+        app:layout_constraintTop_toBottomOf="@+id/midPlusA" />
+
+    <Button
+        android:id="@+id/lowMinusA"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:text="-"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/lowScoreTA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/midMinusA" />
+
+    <TextView
+        android:id="@+id/topScoreTA"
+        android:layout_width="75dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/topPlusA"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/topMinusA"
+        app:layout_constraintTop_toTopOf="@+id/topMinusA" />
+
+    <TextView
+        android:id="@+id/midScoreTA"
+        android:layout_width="75dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="50dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/midPlusA"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/midMinusA"
+        app:layout_constraintTop_toBottomOf="@+id/topScoreTA" />
+
+    <TextView
+        android:id="@+id/lowScoreTA"
+        android:layout_width="75dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="45dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/lowPlusA"
+        app:layout_constraintStart_toEndOf="@+id/lowMinusA"
+        app:layout_constraintTop_toBottomOf="@+id/midScoreTA" />
+
+    <TextView
+        android:id="@+id/topButtonsText3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:text="Low Score"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/lowMinusA"
+        app:layout_constraintEnd_toEndOf="@+id/midMinusA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/midMinusA" />
+
+    <TextView
+        android:id="@+id/topButtonsText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-5dp"
+        android:text="High Score"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/topMinusA"
+        app:layout_constraintEnd_toEndOf="@+id/topMinusA"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/community"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/topButtonsText2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:text="Middle Score"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/midMinusA"
+        app:layout_constraintEnd_toEndOf="@+id/topMinusA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topMinusA" />
+
+    <Button
+        android:id="@+id/midPlusA"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/white"
+        android:text="+"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/midScoreTA"
+        app:layout_constraintTop_toBottomOf="@+id/topPlusA" />
+
+    <EditText
+        android:id="@+id/scoutNameI"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Scout Name"
+        android:inputType="textPersonName"
+        android:textColor="@color/design_default_color_surface"
+        android:textColorHint="#919191"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+
+    <EditText
+        android:id="@+id/matchNumI"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Match #"
+        android:inputType="number"
+        android:textColor="@color/design_default_color_surface"
+        android:textColorHint="#919191"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoutNameI" />
+
+    <Button
+        android:id="@+id/submitInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/white"
+        android:text="Submit"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/engaged"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/teamNumI"
+        app:layout_constraintTop_toBottomOf="@+id/matchNumI" />
+
+    <Button
+        android:id="@+id/docked"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Docked"
+        android:textColor="@color/design_default_color_background"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/community"
+        app:layout_constraintEnd_toStartOf="@+id/engaged"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matchNumI" />
+
+    <Button
+        android:id="@+id/engaged"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Engaged"
+        android:textColor="@color/design_default_color_background"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/community"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/docked"
+        app:layout_constraintTop_toBottomOf="@+id/teamNumI" />
+
+    <Button
+        android:id="@+id/community"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Community"
+        android:textColor="@color/design_default_color_background"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/topMinusA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/docked" />
+
+    <Spinner
+        android:id="@+id/teamNumI"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/white"
+        android:backgroundTintMode="add"
+        android:dropDownSelector="@color/design_default_color_background"
+        app:layout_constraintBottom_toTopOf="@+id/docked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matchNumI"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

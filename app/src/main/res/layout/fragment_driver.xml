@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#323435"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <Button
+        android:id="@+id/linksMinusD"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:text="-"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/lowScoreTD"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linksTextD" />
+
+    <Button
+        android:id="@+id/linksPlusD"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:text="+"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lowScoreTD"
+        app:layout_constraintTop_toTopOf="@+id/linksMinusD" />
+
+    <TextView
+        android:id="@+id/linksScoreTD"
+        android:layout_width="75dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/lowPlusD"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lowMinusD"
+        app:layout_constraintTop_toTopOf="@+id/linksMinusD" />
+
+    <Button
+        android:id="@+id/lowMinusD"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:text="-"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/lowScoreTD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lowScoreTextD" />
+
+    <TextView
+        android:id="@+id/lowScoreTextD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Low Score"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/midMinusD" />
+
+    <TextView
+        android:id="@+id/linksTextD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Links"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/linksMinusD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lowMinusD" />
+
+    <Button
+        android:id="@+id/lowPlusD"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:text="+"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lowScoreTD"
+        app:layout_constraintTop_toBottomOf="@+id/lowScoreTextD" />
+
+    <TextView
+        android:id="@+id/lowScoreTD"
+        android:layout_width="75dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/lowPlusD"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/lowMinusD"
+        app:layout_constraintTop_toBottomOf="@+id/lowScoreTextD" />
+
+    <Button
+        android:id="@+id/midMinusD"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:text="-"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/midScoreTD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/midScoreTextD" />
+
+    <TextView
+        android:id="@+id/midScoreTextD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Middle Score"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topMinusD" />
+
+    <TextView
+        android:id="@+id/midScoreTD"
+        android:layout_width="75dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/midPlusD"
+        app:layout_constraintStart_toEndOf="@+id/midMinusD"
+        app:layout_constraintTop_toBottomOf="@+id/midScoreTextD" />
+
+    <Button
+        android:id="@+id/midPlusD"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:text="+"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/midScoreTD"
+        app:layout_constraintTop_toBottomOf="@+id/midScoreTextD" />
+
+    <TextView
+        android:id="@+id/topScoreTextD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="75dp"
+        android:text="High Score"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_driver_top" />
+
+    <Button
+        android:id="@+id/topPlusD"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:text="+"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/topScoreTD"
+        app:layout_constraintTop_toBottomOf="@+id/text_driver_top" />
+
+    <Button
+        android:id="@+id/topMinusD"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="98dp"
+        android:backgroundTint="@color/white"
+        android:text="-"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/topScoreTD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_driver_top" />
+
+    <Button
+        android:id="@+id/coopB"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Co-Op"
+        android:textColor="@color/design_default_color_background"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linksMinusD" />
+
+    <TextView
+        android:id="@+id/text_driver_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/topScoreTD"
+        android:layout_width="75dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/topPlusD"
+        app:layout_constraintStart_toEndOf="@+id/topMinusD"
+        app:layout_constraintTop_toTopOf="@+id/topMinusD" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
