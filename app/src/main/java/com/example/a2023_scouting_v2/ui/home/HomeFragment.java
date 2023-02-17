@@ -14,22 +14,23 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.a2023_scouting_v2.SaveData;
 import com.example.a2023_scouting_v2.databinding.FragmentAutoBinding;
 
 public class HomeFragment extends Fragment {
-
+    SaveData saveData = new SaveData();
     private FragmentAutoBinding binding;
 
-    public int topCount = 0;
-    public int midCount = 0;
-    public int lowCount = 0;
-    public String scoutName = "";
-    public String teamNum = "";
-    public String matchNum = "";
+    int topCount = saveData.topScoreA;
+    int midCount = saveData.midScoreA;
+    int lowCount = saveData.lowScoreA;
+    String scoutName = saveData.scoutName;
+    String teamNum = saveData.teamNum;
+    String matchNum = saveData.matchNum;
     boolean submitted = false;
-    boolean docked = false;
-    boolean engaged = false;
-    boolean community = false;
+    boolean docked = saveData.dockedA;
+    boolean engaged = saveData.engagedA;
+    boolean community = saveData.community;
     boolean switchedView = false;
 
     public View onCreateView(@NonNull LayoutInflater inflater,

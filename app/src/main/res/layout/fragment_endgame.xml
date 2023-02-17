@@ -7,6 +7,70 @@
     android:background="#323435"
     tools:context=".ui.notifications.NotificationsFragment">
 
+    <Button
+        android:id="@+id/engagedTE"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:text="engaged"
+        android:textColor="@color/design_default_color_background"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_notifications" />
+
+    <Button
+        android:id="@+id/dockedTE"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:text="docked"
+        android:textColor="@color/design_default_color_background"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/engagedTE" />
+
+    <Button
+        android:id="@+id/parkedTE"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:text="parked"
+        android:textColor="@color/design_default_color_background"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dockedTE" />
+
+    <Button
+        android:id="@+id/noneTE"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:text="None"
+        android:textColor="@color/design_default_color_background"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parkedTE" />
+
     <TextView
         android:id="@+id/text_notifications"
         android:layout_width="match_parent"
@@ -37,71 +101,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <RadioGroup
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/saveData"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_notifications">
-
-        <RadioButton
-            android:id="@+id/engagedTE"
-            style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="98dp"
-            android:layout_marginEnd="8dp"
-            android:backgroundTintMode="add"
-            android:text="Engaged"
-            android:textAlignment="center"
-            android:textColor="@color/design_default_color_background"
-            android:textColorHighlight="@color/purple_500"
-            android:textColorLink="@color/purple_500" />
-
-        <RadioButton
-            android:id="@+id/dockedTE"
-            style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="98dp"
-            android:layout_marginEnd="8dp"
-            android:text="Docked"
-            android:textAlignment="center"
-            android:textColor="@color/design_default_color_background"
-            android:textColorHighlight="@color/purple_500"
-            android:textColorLink="@color/purple_500" />
-
-        <RadioButton
-            android:id="@+id/parkedTE"
-            style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="98dp"
-            android:layout_marginEnd="8dp"
-            android:text="parked"
-            android:textAlignment="center"
-            android:textColor="@color/design_default_color_background"
-            android:textColorHighlight="@color/purple_500"
-            android:textColorLink="@color/purple_500" />
-
-        <RadioButton
-            android:id="@+id/noneTE"
-            style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="98dp"
-            android:layout_marginEnd="8dp"
-            android:text="none"
-            android:textAlignment="center"
-            android:textColor="@color/design_default_color_background"
-            android:textColorHighlight="@color/purple_500"
-            android:textColorLink="@color/purple_500" />
-    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,15 +12,16 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.a2023_scouting_v2.SaveData;
 import com.example.a2023_scouting_v2.databinding.FragmentDriverBinding;
 
 public class DashboardFragment extends Fragment {
-
+    SaveData saveData = new SaveData();
     private FragmentDriverBinding binding;
-    public int topCount = 0;
-    static int midCount = 0;
-    static int lowCount = 0;
-    static int linkCount = 0;
+    public int topCount = saveData.topScoreD;
+    public int midCount = saveData.midScoreD;
+    public int lowCount = saveData.lowScoreD;
+    public int linkCount = saveData.linksD;
     static boolean coop = false;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
