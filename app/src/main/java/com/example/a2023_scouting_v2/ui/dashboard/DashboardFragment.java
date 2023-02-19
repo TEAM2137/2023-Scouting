@@ -16,13 +16,12 @@ import com.example.a2023_scouting_v2.SaveData;
 import com.example.a2023_scouting_v2.databinding.FragmentDriverBinding;
 
 public class DashboardFragment extends Fragment {
-    SaveData saveData = new SaveData();
     private FragmentDriverBinding binding;
-    public int topCount = saveData.topScoreD;
-    public int midCount = saveData.midScoreD;
-    public int lowCount = saveData.lowScoreD;
-    public int linkCount = saveData.linksD;
-    static boolean coop = false;
+    public int topCount = 0;
+    public int midCount = 0;
+    public int lowCount = 0;
+    public int linkCount = 0;
+    public boolean coop = false;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -193,6 +192,7 @@ public class DashboardFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
+
         super.onDestroyView();
         binding = null;
     }

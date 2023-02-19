@@ -1,43 +1,52 @@
 package com.example.a2023_scouting_v2;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
+
+import android.os.Environment;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 
+import com.example.a2023_scouting_v2.ui.dashboard.DashboardFragment;
+import com.example.a2023_scouting_v2.ui.home.HomeFragment;
+import com.example.a2023_scouting_v2.ui.notifications.NotificationsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.a2023_scouting_v2.databinding.ActivityMainBinding;
+import com.opencsv.CSVWriter;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
-
+    static HomeFragment auto = new HomeFragment();
+    static DashboardFragment teleOp = new DashboardFragment();
+    static NotificationsFragment endgame = new NotificationsFragment();
     private ActivityMainBinding binding;
+    public String buttonClicked = "";
+    public static String finalendvalue = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        HomeFragment auto = new HomeFragment();
+        DashboardFragment teleop = new DashboardFragment();
+        NotificationsFragment endgame = new NotificationsFragment();
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         Spinner spinnerTeams = findViewById(R.id.teamNumI);
-        ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(this, R.array.teams, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(this, R.array.teams, android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerTeams.setAdapter(adapter);
 
 
@@ -50,7 +59,34 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
-
     }
 
+    public static String getData() {
+        System.out.println(auto.topCount);
+        return "2023Event" + "," + auto.teamNum + "," + auto.matchNum + "," + auto.community + "," +  auto.topCount + "," + auto.midCount + "," + auto.lowCount + "," + auto.docked + "," + auto.engaged + "," + teleOp.topCount + "," + teleOp.midCount + "," + teleOp.lowCount + "," + teleOp.linkCount + "," + teleOp.coop + "," + endgame.docked + "," + endgame.engaged + "," + endgame.parked + "," + endgame.none + "," + "Blue Dev" + "," + auto.scoutName;
+    }
+
+    public static void saveData(){
+        finalendvalue = getData();
+        System.out.println(finalendvalue);
+
+        try {
+            String [] content = finalendvalue.split(",");
+            File file = new File(String.valueOf(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS + "/matches" + ".csv")));
+            CSVWriter writer = new CSVWriter(new FileWriter(file, true));
+
+            // if file doesnt exists, then create it
+            if (!file.exists()) {
+                file.createNewFile();
+                System.out.println("Created new file at: " + Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS + "/matches" + ".csv"));
+            }
+
+            writer.writeNext(content);
+            System.out.println("Saved data to CSV file at " + Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS + "/matches" + ".csv") + "\nData: " + content);
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

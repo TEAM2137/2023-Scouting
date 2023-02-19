@@ -14,24 +14,21 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.a2023_scouting_v2.SaveData;
 import com.example.a2023_scouting_v2.databinding.FragmentAutoBinding;
 
 public class HomeFragment extends Fragment {
-    SaveData saveData = new SaveData();
     private FragmentAutoBinding binding;
-
-    int topCount = saveData.topScoreA;
-    int midCount = saveData.midScoreA;
-    int lowCount = saveData.lowScoreA;
-    String scoutName = saveData.scoutName;
-    String teamNum = saveData.teamNum;
-    String matchNum = saveData.matchNum;
-    boolean submitted = false;
-    boolean docked = saveData.dockedA;
-    boolean engaged = saveData.engagedA;
-    boolean community = saveData.community;
-    boolean switchedView = false;
+    public int topCount = 0;
+    public int midCount = 0;
+    public int lowCount = 0;
+    public String scoutName = "";
+    public String teamNum = "";
+    public String matchNum = "";
+    public boolean submitted = false;
+    public boolean docked = false;
+    public boolean engaged = false;
+    public boolean community = false;
+    public boolean switchedView = false;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -83,7 +80,7 @@ public class HomeFragment extends Fragment {
         lowScoreNum.setText("" + lowCount);
         if(!community){
             communityB.setBackgroundColor(Color.parseColor("#3E3E3E"));
-        } else if (community) {
+        } else {
             communityB.setTextColor(Color.parseColor("#000000"));
             communityB.setBackgroundColor(Color.parseColor("#51f542"));
         }
@@ -99,7 +96,7 @@ public class HomeFragment extends Fragment {
         }else{
             engagedB.setBackgroundColor(Color.parseColor("#3E3E3E"));
         }
-        if(switchedView == true && submitted){
+        if(switchedView && submitted){
             submitInfo.setText("Submitted");
             submitInfo.setTextSize(15);
             submitInfo.setBackgroundColor(Color.parseColor("#2D2D2D"));
@@ -111,6 +108,8 @@ public class HomeFragment extends Fragment {
             submitInfo.setEnabled(false);
         }
 
+        
+
         communityB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -118,11 +117,12 @@ public class HomeFragment extends Fragment {
                     community = false;
                     communityB.setTextColor(Color.parseColor("#FFFFFF"));
                     communityB.setBackgroundColor(Color.parseColor("#3E3E3E"));
-                } else if (!community) {
+                } else {
                     community = true;
                     communityB.setTextColor(Color.parseColor("#000000"));
                     communityB.setBackgroundColor(Color.parseColor("#51f542"));
                 }
+                
             }
         });
 
@@ -139,6 +139,7 @@ public class HomeFragment extends Fragment {
                 submitInfo.setBackgroundColor(Color.parseColor("#51f542"));
                 submitInfo.setTextSize(17);
                 submitted = true;
+                
             }
         });
 
@@ -162,6 +163,7 @@ public class HomeFragment extends Fragment {
                     dockedB.setBackgroundColor(Color.parseColor("#3E3E3E"));
                     dockedB.setTextColor(Color.parseColor("#FFFFFF"));
                 }
+                
             }
         });
         dockedB.setOnClickListener(new View.OnClickListener() {
@@ -183,6 +185,7 @@ public class HomeFragment extends Fragment {
                     dockedB.setTextColor(Color.parseColor("#FFFFFF"));
                     dockedB.setBackgroundColor(Color.parseColor("#3E3E3E"));
                 }
+                
             }
         });
 
@@ -193,12 +196,13 @@ public class HomeFragment extends Fragment {
                 if(topCount > 8){
                     topCount = 0;
                     topScoreNum.setText("" + topCount);
-                    System.out.println(topCount);
+                    System.out.println(""+topCount);
                 } else {
                     topCount++;
                     topScoreNum.setText("" + topCount);
-                    System.out.println(topCount);
+                    System.out.println(""+topCount);
                 }
+                
             }
         });
 
@@ -214,6 +218,7 @@ public class HomeFragment extends Fragment {
                     topScoreNum.setText("" + topCount);
                     System.out.println(topCount);
                 }
+                
             }
         });
 
@@ -230,6 +235,7 @@ public class HomeFragment extends Fragment {
                     midScoreNum.setText("" + midCount);
                     System.out.println(midCount);
                 }
+                
             }
         });
 
@@ -238,13 +244,11 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 if(midCount < 1){
                     midCount = 9;
-                    midScoreNum.setText("" + midCount);
-                    System.out.println(midCount);
                 } else {
                     midCount--;
-                    midScoreNum.setText("" + midCount);
-                    System.out.println(midCount);
                 }
+                midScoreNum.setText("" + midCount);
+                System.out.println(midCount);
             }
         });
 
@@ -254,13 +258,12 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 if(lowCount > 8){
                     lowCount = 0;
-                    lowScoreNum.setText("" + lowCount);
-                    System.out.println(lowCount);
                 } else {
                     lowCount++;
-                    lowScoreNum.setText("" + lowCount);
-                    System.out.println(lowCount);
                 }
+                lowScoreNum.setText("" + lowCount);
+                System.out.println(lowCount);
+
             }
         });
 
@@ -276,6 +279,7 @@ public class HomeFragment extends Fragment {
                     lowScoreNum.setText("" + lowCount);
                     System.out.println(lowCount);
                 }
+                
             }
         });
 
@@ -287,5 +291,6 @@ public class HomeFragment extends Fragment {
         switchedView = true;
         super.onDestroyView();
         binding = null;
+        System.out.println("Top count: " + topCount);
     }
 }
