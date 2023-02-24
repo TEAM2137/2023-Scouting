@@ -1,4 +1,4 @@
-package com.example.a2023_scouting_v2.ui.home;
+package com.example.a2023_scouting_v2.ui.auto;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -16,7 +16,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.a2023_scouting_v2.databinding.FragmentAutoBinding;
 
-public class HomeFragment extends Fragment {
+public class AutoFragment extends Fragment {
     private FragmentAutoBinding binding;
     public int topCount = 0;
     public int midCount = 0;
@@ -32,8 +32,8 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        AutoViewModel homeViewModel =
+                new ViewModelProvider(this).get(AutoViewModel.class);
 
         binding = FragmentAutoBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

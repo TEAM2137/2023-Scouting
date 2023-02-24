@@ -1,14 +1,14 @@
-package com.example.a2023_scouting_v2.ui.home;
+package com.example.a2023_scouting_v2.ui.auto;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class AutoViewModel extends ViewModel {
 
     private final MutableLiveData<String> mTitle;
 
-    public HomeViewModel() {
+    public AutoViewModel() {
         mTitle = new MutableLiveData<>();
         mTitle.setValue("Charged Up Scouting | Dev Tablet 1 (BLUE)");
     }

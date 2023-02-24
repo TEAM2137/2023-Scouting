@@ -1,4 +1,4 @@
-package com.example.a2023_scouting_v2.ui.notifications;
+package com.example.a2023_scouting_v2.ui.endgame;
 
 import static com.example.a2023_scouting_v2.MainActivity.saveData;
 
@@ -16,7 +16,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.a2023_scouting_v2.databinding.FragmentEndgameBinding;
 
-public class NotificationsFragment extends Fragment {
+public class EndgameFragment extends Fragment {
     private FragmentEndgameBinding binding;
     private String buttonClicked = "";
     public boolean engaged = false;
@@ -26,8 +26,8 @@ public class NotificationsFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        NotificationsViewModel notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        EndgameViewModel notificationsViewModel =
+                new ViewModelProvider(this).get(EndgameViewModel.class);
 
         binding = FragmentEndgameBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

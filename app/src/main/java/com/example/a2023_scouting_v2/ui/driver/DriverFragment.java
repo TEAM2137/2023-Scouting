@@ -1,4 +1,4 @@
-package com.example.a2023_scouting_v2.ui.dashboard;
+package com.example.a2023_scouting_v2.ui.driver;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,10 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.a2023_scouting_v2.SaveData;
 import com.example.a2023_scouting_v2.databinding.FragmentDriverBinding;
 
-public class DashboardFragment extends Fragment {
+public class DriverFragment extends Fragment {
     private FragmentDriverBinding binding;
     public int topCount = 0;
     public int midCount = 0;
@@ -25,8 +24,8 @@ public class DashboardFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        DashboardViewModel dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
+        DriverViewModel dashboardViewModel =
+                new ViewModelProvider(this).get(DriverViewModel.class);
 
         binding = FragmentDriverBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

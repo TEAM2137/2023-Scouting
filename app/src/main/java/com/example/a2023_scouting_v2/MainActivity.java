@@ -9,9 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 
-import com.example.a2023_scouting_v2.ui.dashboard.DashboardFragment;
-import com.example.a2023_scouting_v2.ui.home.HomeFragment;
-import com.example.a2023_scouting_v2.ui.notifications.NotificationsFragment;
+import com.example.a2023_scouting_v2.databinding.ActivityMainBinding;
+import com.example.a2023_scouting_v2.ui.driver.DriverFragment;
+import com.example.a2023_scouting_v2.ui.auto.AutoFragment;
+import com.example.a2023_scouting_v2.ui.endgame.EndgameFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.navigation.NavController;
@@ -19,7 +20,6 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.a2023_scouting_v2.databinding.ActivityMainBinding;
 import com.opencsv.CSVWriter;
 
 import java.io.File;
@@ -27,9 +27,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
-    static HomeFragment auto = new HomeFragment();
-    static DashboardFragment teleOp = new DashboardFragment();
-    static NotificationsFragment endgame = new NotificationsFragment();
+    static AutoFragment auto = new AutoFragment();
+    static DriverFragment teleOp = new DriverFragment();
+    static EndgameFragment endgame = new EndgameFragment();
     private ActivityMainBinding binding;
     public String buttonClicked = "";
     public static String finalendvalue = "";
@@ -37,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        HomeFragment auto = new HomeFragment();
-        DashboardFragment teleop = new DashboardFragment();
-        NotificationsFragment endgame = new NotificationsFragment();
+        AutoFragment auto = new AutoFragment();
+        DriverFragment teleop = new DriverFragment();
+        EndgameFragment endgame = new EndgameFragment();
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
