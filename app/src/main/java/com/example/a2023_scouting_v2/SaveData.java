@@ -72,7 +72,7 @@ public class SaveData {
                 convertBool(engagedE) + "," +
                 convertBool(parkedE) + "," +
                 convertBool(noneE) + "," +
-                "Blue 1" + "," +
+                "Red 3" + "," +
                 scoutName;
     }
 
