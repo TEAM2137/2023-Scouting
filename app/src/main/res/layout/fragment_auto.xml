@@ -230,11 +230,10 @@
 
     <Button
         android:id="@+id/submitInfo"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/white"
         android:text="Submit"
@@ -242,7 +241,6 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/engaged"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/teamNumI"
         app:layout_constraintTop_toBottomOf="@+id/matchNumI" />
 
     <Button
@@ -267,7 +265,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/white"
@@ -277,7 +274,7 @@
         app:layout_constraintBottom_toTopOf="@+id/community"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/docked"
-        app:layout_constraintTop_toBottomOf="@+id/teamNumI" />
+        app:layout_constraintTop_toTopOf="@+id/docked" />
 
     <Button
         android:id="@+id/community"
@@ -299,16 +296,16 @@
         android:id="@+id/teamNumI"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="143dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/custom_dropdown"
         android:backgroundTint="@color/white"
         android:backgroundTintMode="add"
         android:dropDownSelector="@color/design_default_color_background"
         app:layout_constraintBottom_toTopOf="@+id/docked"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toStartOf="@+id/submitInfo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/matchNumI"
         app:layout_constraintVertical_bias="1.0" />

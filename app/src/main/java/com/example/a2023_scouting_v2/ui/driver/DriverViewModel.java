@@ -1,8 +1,12 @@
 package com.example.a2023_scouting_v2.ui.driver;
 
+import static com.example.a2023_scouting_v2.SaveData.getTeam;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
+import com.example.a2023_scouting_v2.SaveData;
 
 public class DriverViewModel extends ViewModel {
 
@@ -10,10 +14,9 @@ public class DriverViewModel extends ViewModel {
 
     public DriverViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Tele-Op | Blue");
+        System.out.println(getTeam());
+        mText.setValue("Tele-Op - Blue 1 | " + getTeam());
     }
 
-    public LiveData<String> getText() {
-        return mText;
-    }
+    public LiveData<String> getText() { return mText; }
 }

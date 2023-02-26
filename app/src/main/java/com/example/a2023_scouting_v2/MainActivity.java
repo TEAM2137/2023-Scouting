@@ -1,12 +1,19 @@
 package com.example.a2023_scouting_v2;
 
+import static com.example.a2023_scouting_v2.SaveData.getDataS;
+
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Environment;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 
 import com.example.a2023_scouting_v2.databinding.ActivityMainBinding;
@@ -49,6 +56,23 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerTeams.setAdapter(adapter);
 
+        spinnerTeams.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+            {
+                //Change the selected item's text color
+                ((TextView) view).setTextColor(Color.rgb(255, 255, 255));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+            }
+        });
+
+
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -62,16 +86,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static String getData() {
-        System.out.println(auto.topCount);
-        return "2023Event" + "," + auto.teamNum + "," + auto.matchNum + "," + auto.community + "," +  auto.topCount + "," + auto.midCount + "," + auto.lowCount + "," + auto.docked + "," + auto.engaged + "," + teleOp.topCount + "," + teleOp.midCount + "," + teleOp.lowCount + "," + teleOp.linkCount + "," + teleOp.coop + "," + endgame.docked + "," + endgame.engaged + "," + endgame.parked + "," + endgame.none + "," + "Blue Dev" + "," + auto.scoutName;
+        System.out.println(getDataS());
+        return getDataS();
+        //return "2023Event" + "," + auto.teamNum + "," + auto.matchNum + "," + auto.community + "," +  auto.topCount + "," + auto.midCount + "," + auto.lowCount + "," + auto.docked + "," + auto.engaged + "," + teleOp.topCount + "," + teleOp.midCount + "," + teleOp.lowCount + "," + teleOp.linkCount + "," + teleOp.coop + "," + endgame.docked + "," + endgame.engaged + "," + endgame.parked + "," + endgame.none + "," + "Blue Dev" + "," + auto.scoutName;
     }
 
     public static void saveData(){
-        finalendvalue = getData();
-        System.out.println(finalendvalue);
-
         try {
-            String [] content = finalendvalue.split(",");
             File file = new File(String.valueOf(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS + "/matches" + ".csv")));
             CSVWriter writer = new CSVWriter(new FileWriter(file, true));
 
@@ -81,10 +102,13 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("Created new file at: " + Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS + "/matches" + ".csv"));
             }
 
+            finalendvalue = getData();
+            System.out.println(finalendvalue);
+            String [] content = finalendvalue.split(",");
+
             writer.writeNext(content);
             System.out.println("Saved data to CSV file at " + Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS + "/matches" + ".csv") + "\nData: " + content);
             writer.close();
-
         } catch (IOException e) {
             e.printStackTrace();
         }

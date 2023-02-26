@@ -10,7 +10,7 @@ public class AutoViewModel extends ViewModel {
 
     public AutoViewModel() {
         mTitle = new MutableLiveData<>();
-        mTitle.setValue("Charged Up Scouting | Dev Tablet 1 (BLUE)");
+        mTitle.setValue("Charged Up Scouting | Blue 1");
     }
 
     public LiveData<String> getTitle() {

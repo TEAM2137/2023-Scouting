@@ -1,7 +1,12 @@
 package com.example.a2023_scouting_v2.ui.endgame;
 
 import static com.example.a2023_scouting_v2.MainActivity.saveData;
+import static com.example.a2023_scouting_v2.SaveData.saveEndgame;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,11 +14,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.a2023_scouting_v2.MainActivity;
 import com.example.a2023_scouting_v2.databinding.FragmentEndgameBinding;
 
 public class EndgameFragment extends Fragment {
@@ -116,7 +123,16 @@ public class EndgameFragment extends Fragment {
         submitInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                System.out.println(engaged);
+                saveEndgame(engaged, docked, parked, none);
                 saveData();
+                Context context = view.getContext();
+                Intent mStartActivity = new Intent(context, MainActivity.class);
+                int mPendingIntentId = 123456;
+                PendingIntent mPendingIntent = PendingIntent.getActivity(context, mPendingIntentId,    mStartActivity, PendingIntent.FLAG_CANCEL_CURRENT);
+                AlarmManager mgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+                mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
+                System.exit(0);
             }
         });
 

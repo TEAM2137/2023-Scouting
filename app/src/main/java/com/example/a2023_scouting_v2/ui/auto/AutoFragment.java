@@ -1,19 +1,26 @@
 package com.example.a2023_scouting_v2.ui.auto;
 
+import static com.example.a2023_scouting_v2.SaveData.saveAuto;
+
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.a2023_scouting_v2.MainActivity;
+import com.example.a2023_scouting_v2.R;
 import com.example.a2023_scouting_v2.databinding.FragmentAutoBinding;
 
 public class AutoFragment extends Fragment {
@@ -108,7 +115,7 @@ public class AutoFragment extends Fragment {
             submitInfo.setEnabled(false);
         }
 
-        
+
 
         communityB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,7 +129,7 @@ public class AutoFragment extends Fragment {
                     communityB.setTextColor(Color.parseColor("#000000"));
                     communityB.setBackgroundColor(Color.parseColor("#51f542"));
                 }
-                
+
             }
         });
 
@@ -139,7 +146,7 @@ public class AutoFragment extends Fragment {
                 submitInfo.setBackgroundColor(Color.parseColor("#51f542"));
                 submitInfo.setTextSize(17);
                 submitted = true;
-                
+                saveAuto(topCount, midCount, lowCount, scoutName, teamNum, matchNum, docked, engaged, community);
             }
         });
 
@@ -163,7 +170,7 @@ public class AutoFragment extends Fragment {
                     dockedB.setBackgroundColor(Color.parseColor("#3E3E3E"));
                     dockedB.setTextColor(Color.parseColor("#FFFFFF"));
                 }
-                
+
             }
         });
         dockedB.setOnClickListener(new View.OnClickListener() {
@@ -185,7 +192,7 @@ public class AutoFragment extends Fragment {
                     dockedB.setTextColor(Color.parseColor("#FFFFFF"));
                     dockedB.setBackgroundColor(Color.parseColor("#3E3E3E"));
                 }
-                
+
             }
         });
 
@@ -202,7 +209,7 @@ public class AutoFragment extends Fragment {
                     topScoreNum.setText("" + topCount);
                     System.out.println(""+topCount);
                 }
-                
+
             }
         });
 
@@ -218,7 +225,7 @@ public class AutoFragment extends Fragment {
                     topScoreNum.setText("" + topCount);
                     System.out.println(topCount);
                 }
-                
+
             }
         });
 
@@ -235,7 +242,7 @@ public class AutoFragment extends Fragment {
                     midScoreNum.setText("" + midCount);
                     System.out.println(midCount);
                 }
-                
+
             }
         });
 
@@ -279,7 +286,7 @@ public class AutoFragment extends Fragment {
                     lowScoreNum.setText("" + lowCount);
                     System.out.println(lowCount);
                 }
-                
+
             }
         });
 
@@ -288,6 +295,7 @@ public class AutoFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
+        saveAuto(topCount, midCount, lowCount, scoutName, teamNum, matchNum, docked, engaged, community);
         switchedView = true;
         super.onDestroyView();
         binding = null;

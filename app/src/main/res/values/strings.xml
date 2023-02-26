@@ -1,4 +1,5 @@
 <resources>
+    <string name="tablet">Blue 3</string>
     <string name="app_name">2023 Scouting</string>
     <string name="title_home">Auto</string>
     <string name="title_dashboard">Tele-Op</string>

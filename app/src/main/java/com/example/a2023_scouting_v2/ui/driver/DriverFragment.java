@@ -1,5 +1,7 @@
 package com.example.a2023_scouting_v2.ui.driver;
 
+import static com.example.a2023_scouting_v2.SaveData.saveDriver;
+
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -191,7 +193,7 @@ public class DriverFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
-
+        saveDriver(topCount, midCount, lowCount, linkCount, coop);
         super.onDestroyView();
         binding = null;
     }
