@@ -1,5 +1,8 @@
 package com.example.a2023_scouting_v2;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class SaveData {
 
     public static int topCountA = 0;
@@ -49,12 +52,20 @@ public class SaveData {
         noneE = none;
     }
 
+    public static List<Integer> getDriverInt() {
+        return Arrays.asList(topCountD, midCountD, lowCountD, linkCount);
+    }
+
+    public static boolean getDriverCoop() {
+        return coopD;
+    }
+
     public static String getTeam() {
         return teamNum;
     }
 
     public static String getDataS () {
-        return "2023Testing" + "," +
+        return "MIKet2" + "," +
                 teamNum + "," +
                 matchNum + "," +
                 convertBool(communityA) + "," +
@@ -72,7 +83,7 @@ public class SaveData {
                 convertBool(engagedE) + "," +
                 convertBool(parkedE) + "," +
                 convertBool(noneE) + "," +
-                "Red 3" + "," +
+                "Blue 3" + "," +
                 scoutName;
     }
 

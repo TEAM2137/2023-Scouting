@@ -15,7 +15,7 @@ public class EndgameViewModel extends ViewModel {
     public EndgameViewModel() {
         mText = new MutableLiveData<>();
         System.out.println(getTeam());
-        mText.setValue("Endgame - Red 3 | " + getTeam());
+        mText.setValue("Endgame - Blue 3 | " + getTeam());
     }
 
     public LiveData<String> getText() {

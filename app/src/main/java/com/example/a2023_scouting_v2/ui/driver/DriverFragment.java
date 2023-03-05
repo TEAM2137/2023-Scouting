@@ -1,7 +1,9 @@
 package com.example.a2023_scouting_v2.ui.driver;
 
+import static com.example.a2023_scouting_v2.SaveData.getDriverInt;
 import static com.example.a2023_scouting_v2.SaveData.saveDriver;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,7 +16,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.a2023_scouting_v2.SaveData;
 import com.example.a2023_scouting_v2.databinding.FragmentDriverBinding;
+
+import java.util.List;
 
 public class DriverFragment extends Fragment {
     private FragmentDriverBinding binding;
@@ -23,9 +28,9 @@ public class DriverFragment extends Fragment {
     public int lowCount = 0;
     public int linkCount = 0;
     public boolean coop = false;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        System.out.println(topCount + ", " + midCount + ", " + lowCount + ", " + linkCount + ", " + coop);
         DriverViewModel dashboardViewModel =
                 new ViewModelProvider(this).get(DriverViewModel.class);
 
@@ -51,6 +56,14 @@ public class DriverFragment extends Fragment {
         final TextView midScoreNum = binding.midScoreTD;
         final TextView lowScoreNum = binding.lowScoreTD;
         final TextView linkScoreNum = binding.linksScoreTD;
+
+        List<Integer> saveints = getDriverInt();
+        System.out.println(saveints);
+
+        topScoreNum.setText("" + saveints.get(0));
+        midScoreNum.setText("" + saveints.get(1));
+        lowScoreNum.setText("" + saveints.get(2));
+        linkScoreNum.setText("" + saveints.get(3));
 
         // Top score button functionality
         topPlusD.setOnClickListener(new View.OnClickListener() {
@@ -193,8 +206,9 @@ public class DriverFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
-        saveDriver(topCount, midCount, lowCount, linkCount, coop);
+        //saveDriver(topCount, midCount, lowCount, linkCount, coop);
         super.onDestroyView();
         binding = null;
+        System.out.println(topCount + ", " + midCount + ", " + lowCount + ", " + linkCount + ", " + coop);
     }
 }

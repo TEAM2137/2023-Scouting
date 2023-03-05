@@ -2,26 +2,26 @@
 
 <!--Blue Color Scheme-->
 
-<!--<resources>-->
-<!--    <color name="purple_200">#FFBB86FC</color>-->
-<!--    <color name="purple_500">#2196F3</color>-->
-<!--    <color name="purple_700">#FF000000</color>-->
-<!--    <color name="teal_200">#FF03DAC5</color>-->
-<!--    <color name="teal_700">#FF018786</color>-->
-<!--    <color name="black">#FF000000</color>-->
-<!--    <color name="white">#3E3E3E</color>-->
-<!--    <color name="my_spinner_text_color">#FFFFFF</color>-->
-<!--</resources>-->
-
-<!--Red Color Scheme-->
-
 <resources>
     <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#F44336</color>
+    <color name="purple_500">#2196F3</color>
     <color name="purple_700">#FF000000</color>
-    <color name="teal_200">#F18035</color>
-    <color name="teal_700">#D1520D</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#3E3E3E</color>
     <color name="my_spinner_text_color">#FFFFFF</color>
 </resources>
+
+<!--Red Color Scheme-->
+
+<!--<resources>-->
+<!--    <color name="purple_200">#FFBB86FC</color>-->
+<!--    <color name="purple_500">#F44336</color>-->
+<!--    <color name="purple_700">#FF000000</color>-->
+<!--    <color name="teal_200">#F18035</color>-->
+<!--    <color name="teal_700">#D1520D</color>-->
+<!--    <color name="black">#FF000000</color>-->
+<!--    <color name="white">#3E3E3E</color>-->
+<!--    <color name="my_spinner_text_color">#FFFFFF</color>-->
+<!--</resources>-->

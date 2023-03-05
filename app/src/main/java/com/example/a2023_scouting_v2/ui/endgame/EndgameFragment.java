@@ -48,6 +48,11 @@ public class EndgameFragment extends Fragment {
         Button noneB = binding.noneTE;
         Button submitInfo = binding.saveData;
 
+        if(engaged) {
+            engagedB.setTextColor(Color.parseColor("#000000"));
+            engagedB.setBackgroundColor(Color.parseColor("#51f542"));
+        }
+
         engagedB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
