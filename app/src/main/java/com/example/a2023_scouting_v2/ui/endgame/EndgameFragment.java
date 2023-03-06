@@ -1,6 +1,8 @@
 package com.example.a2023_scouting_v2.ui.endgame;
 
 import static com.example.a2023_scouting_v2.MainActivity.saveData;
+import static com.example.a2023_scouting_v2.SaveData.getDriverInt;
+import static com.example.a2023_scouting_v2.SaveData.getEndgameButtons;
 import static com.example.a2023_scouting_v2.SaveData.saveEndgame;
 
 import android.app.AlarmManager;
@@ -22,6 +24,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.a2023_scouting_v2.MainActivity;
 import com.example.a2023_scouting_v2.databinding.FragmentEndgameBinding;
+
+import java.util.List;
 
 public class EndgameFragment extends Fragment {
     private FragmentEndgameBinding binding;
@@ -48,9 +52,29 @@ public class EndgameFragment extends Fragment {
         Button noneB = binding.noneTE;
         Button submitInfo = binding.saveData;
 
+        List<Boolean> endgameButtons = getEndgameButtons();
+        System.out.println(endgameButtons);
+
+        engaged = endgameButtons.get(0);
+        docked = endgameButtons.get(1);
+        parked = endgameButtons.get(2);
+        none = endgameButtons.get(3);
+
         if(engaged) {
             engagedB.setTextColor(Color.parseColor("#000000"));
             engagedB.setBackgroundColor(Color.parseColor("#51f542"));
+        }
+        if(docked) {
+            dockedB.setTextColor(Color.parseColor("#000000"));
+            dockedB.setBackgroundColor(Color.parseColor("#51f542"));
+        }
+        if(parked) {
+            parkedB.setTextColor(Color.parseColor("#000000"));
+            parkedB.setBackgroundColor(Color.parseColor("#51f542"));
+        }
+        if(none) {
+            noneB.setTextColor(Color.parseColor("#000000"));
+            noneB.setBackgroundColor(Color.parseColor("#51f542"));
         }
 
         engagedB.setOnClickListener(new View.OnClickListener() {
@@ -173,5 +197,6 @@ public class EndgameFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+        saveEndgame(engaged, docked, parked, none);
     }
 }

@@ -1,5 +1,6 @@
 package com.example.a2023_scouting_v2.ui.driver;
 
+import static com.example.a2023_scouting_v2.SaveData.getDriverCoop;
 import static com.example.a2023_scouting_v2.SaveData.getDriverInt;
 import static com.example.a2023_scouting_v2.SaveData.saveDriver;
 
@@ -60,10 +61,21 @@ public class DriverFragment extends Fragment {
         List<Integer> saveints = getDriverInt();
         System.out.println(saveints);
 
-        topScoreNum.setText("" + saveints.get(0));
-        midScoreNum.setText("" + saveints.get(1));
-        lowScoreNum.setText("" + saveints.get(2));
-        linkScoreNum.setText("" + saveints.get(3));
+        topCount = saveints.get(0);
+        midCount = saveints.get(1);
+        lowCount = saveints.get(2);
+        linkCount = saveints.get(3);
+        coop = getDriverCoop();
+
+        topScoreNum.setText("" + topCount);
+        midScoreNum.setText("" + midCount);
+        lowScoreNum.setText("" + lowCount);
+        linkScoreNum.setText("" + linkCount);
+
+        if(coop){
+            coopB.setTextColor(Color.parseColor("#000000"));
+            coopB.setBackgroundColor(Color.parseColor("#51f542"));
+        }
 
         // Top score button functionality
         topPlusD.setOnClickListener(new View.OnClickListener() {
@@ -206,7 +218,7 @@ public class DriverFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
-        //saveDriver(topCount, midCount, lowCount, linkCount, coop);
+        saveDriver(topCount, midCount, lowCount, linkCount, coop);
         super.onDestroyView();
         binding = null;
         System.out.println(topCount + ", " + midCount + ", " + lowCount + ", " + linkCount + ", " + coop);

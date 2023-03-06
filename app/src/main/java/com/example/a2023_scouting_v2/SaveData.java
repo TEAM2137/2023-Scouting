@@ -56,6 +56,10 @@ public class SaveData {
         return Arrays.asList(topCountD, midCountD, lowCountD, linkCount);
     }
 
+    public static List<Boolean> getEndgameButtons() {
+        return Arrays.asList(engagedE, dockedE, parkedE, noneE);
+    }
+
     public static boolean getDriverCoop() {
         return coopD;
     }
