@@ -2,6 +2,7 @@ package com.example.a2023_scouting_v2.ui.auto;
 
 import static com.example.a2023_scouting_v2.SaveData.saveAuto;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -37,6 +38,7 @@ public class AutoFragment extends Fragment {
     public boolean community = false;
     public boolean switchedView = false;
 
+    @SuppressLint("SetTextI18n")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         AutoViewModel homeViewModel =
@@ -203,11 +205,11 @@ public class AutoFragment extends Fragment {
                 if(topCount > 8){
                     topCount = 0;
                     topScoreNum.setText("" + topCount);
-                    System.out.println(""+topCount);
+                    System.out.println("" + topCount);
                 } else {
                     topCount++;
                     topScoreNum.setText("" + topCount);
-                    System.out.println(""+topCount);
+                    System.out.println("" + topCount);
                 }
 
             }

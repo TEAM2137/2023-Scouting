@@ -15,7 +15,7 @@ public class DriverViewModel extends ViewModel {
     public DriverViewModel() {
         mText = new MutableLiveData<>();
         System.out.println(getTeam());
-        mText.setValue("Tele-Op - Blue 3 | " + getTeam());
+        mText.setValue("Tele-Op - Red 1 | " + getTeam());
     }
 
     public LiveData<String> getText() { return mText; }
