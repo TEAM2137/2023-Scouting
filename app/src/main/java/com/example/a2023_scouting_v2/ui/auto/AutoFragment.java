@@ -38,7 +38,6 @@ public class AutoFragment extends Fragment {
     public boolean community = false;
     public boolean switchedView = false;
 
-    @SuppressLint("SetTextI18n")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         AutoViewModel homeViewModel =
