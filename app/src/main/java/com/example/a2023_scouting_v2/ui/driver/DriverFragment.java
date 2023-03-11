@@ -2,6 +2,7 @@ package com.example.a2023_scouting_v2.ui.driver;
 
 import static com.example.a2023_scouting_v2.SaveData.getDriverCoop;
 import static com.example.a2023_scouting_v2.SaveData.getDriverInt;
+import static com.example.a2023_scouting_v2.SaveData.getStrings;
 import static com.example.a2023_scouting_v2.SaveData.saveDriver;
 
 import android.content.Context;
@@ -39,7 +40,6 @@ public class DriverFragment extends Fragment {
         View root = binding.getRoot();
 
         final TextView textView = binding.textDriverTop;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
         Button topPlusD = binding.topPlusD;
         Button midPlusD = binding.midPlusD;
@@ -59,12 +59,15 @@ public class DriverFragment extends Fragment {
         final TextView linkScoreNum = binding.linksScoreTD;
 
         List<Integer> saveints = getDriverInt();
+        List<String> saveStrings = getStrings();
+        String saveteamString = saveStrings.get(0);
         System.out.println(saveints);
 
         topCount = saveints.get(0);
         midCount = saveints.get(1);
         lowCount = saveints.get(2);
         linkCount = saveints.get(3);
+        textView.setText("Tele-Op - Red 1 | " + saveteamString);
         coop = getDriverCoop();
 
         topScoreNum.setText("" + topCount);

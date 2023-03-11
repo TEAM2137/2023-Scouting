@@ -1,6 +1,7 @@
 package com.example.a2023_scouting_v2;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class SaveData {
@@ -54,6 +55,10 @@ public class SaveData {
 
     public static List<Integer> getDriverInt() {
         return Arrays.asList(topCountD, midCountD, lowCountD, linkCount);
+    }
+
+    public static List<String> getStrings(){
+        return Arrays.asList(teamNum);
     }
 
     public static List<Boolean> getEndgameButtons() {
