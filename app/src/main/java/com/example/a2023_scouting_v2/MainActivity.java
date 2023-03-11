@@ -2,7 +2,7 @@ package com.example.a2023_scouting_v2;
 
 import static com.example.a2023_scouting_v2.SaveData.getDataS;
 
-import android.content.res.Resources;
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -50,29 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        Spinner spinnerTeams = findViewById(R.id.teamNumI);
-        ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(this, R.array.teams, android.R.layout.simple_spinner_dropdown_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerTeams.setAdapter(adapter);
-
-        spinnerTeams.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-        {
-
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
-                //Change the selected item's text color
-                ((TextView) view).setTextColor(Color.rgb(255, 255, 255));
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent)
-            {
-            }
-        });
-
-
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each

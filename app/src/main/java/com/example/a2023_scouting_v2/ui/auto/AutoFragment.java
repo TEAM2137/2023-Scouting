@@ -3,6 +3,7 @@ package com.example.a2023_scouting_v2.ui.auto;
 import static com.example.a2023_scouting_v2.SaveData.saveAuto;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -37,6 +38,8 @@ public class AutoFragment extends Fragment {
     public boolean engaged = false;
     public boolean community = false;
     public boolean switchedView = false;
+
+    MainActivity main = new MainActivity();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -105,18 +108,16 @@ public class AutoFragment extends Fragment {
             engagedB.setBackgroundColor(Color.parseColor("#3E3E3E"));
         }
         if(switchedView && submitted){
-            submitInfo.setText("Submitted");
+            submitInfo.setText("Resubmit?");
             submitInfo.setTextSize(15);
-            submitInfo.setBackgroundColor(Color.parseColor("#2D2D2D"));
-            submitInfo.setEnabled(false);
-        } else if (switchedView && !submitted){
-            submitInfo.setText("Locked");
-            submitInfo.setTextSize(20);
-            submitInfo.setBackgroundColor(Color.parseColor("#2D2D2D"));
-            submitInfo.setEnabled(false);
+            submitInfo.setTextColor(Color.parseColor("#000000"));
+            submitInfo.setBackgroundColor(Color.parseColor("#51f542"));
         }
 
-
+        Spinner spinnerTeams = root.findViewById(R.id.teamNumI);
+        ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(root.getContext(), R.array.teams, R.layout.custom_spinner);
+        adapter.setDropDownViewResource(R.layout.custom_spinner);
+        spinnerTeams.setAdapter(adapter);
 
         communityB.setOnClickListener(new View.OnClickListener() {
             @Override
