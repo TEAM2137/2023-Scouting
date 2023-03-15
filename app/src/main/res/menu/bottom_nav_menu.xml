@@ -16,4 +16,9 @@
         android:icon="@drawable/stopwatch_24px"
         android:title="@string/title_notifications" />
 
+    <item
+        android:id="@+id/navigation_data"
+        android:icon="@drawable/data_icon"
+        android:title="@string/title_data" />
+
 </menu>

@@ -4,6 +4,10 @@
     <string name="title_home">Auto</string>
     <string name="title_dashboard">Tele-Op</string>
     <string name="title_notifications">Endgame</string>
+    <string name="title_data">Data</string>
+    <string name="data_warning">Do not press any buttons unless you know what you are doing</string>
+    <string name="dataActionBar">Data</string>
+    <string name="versionNum">2023 Scouting App v1.07 (Dev Build)</string>
 
     <string-array name="teams">
         <item>Select a Team</item>
