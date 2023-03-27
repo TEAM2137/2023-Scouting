@@ -74,7 +74,7 @@ public class SaveData {
     }
 
     public static String getDataS () {
-        return "MIKet2" + "," +
+        return "MICCC" + "," +
                 teamNum + "," +
                 matchNum + "," +
                 convertBool(communityA) + "," +

@@ -197,8 +197,9 @@
         app:layout_constraintStart_toEndOf="@+id/midScoreTA"
         app:layout_constraintTop_toTopOf="@+id/midMinusA" />
 
-    <EditText
-        android:id="@+id/scoutNameI"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/scoutNameIbox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="8dp"
@@ -207,16 +208,26 @@
         android:ems="10"
         android:hint="Scout Name"
         android:inputType="textPersonName"
-        android:textColor="@color/design_default_color_surface"
-        android:textColorHint="#919191"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#989898"
         android:textSize="20sp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="#989898"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop">
 
-    <EditText
-        android:id="@+id/matchNumI"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/scoutNameI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/matchNumIbox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="8dp"
@@ -225,13 +236,23 @@
         android:ems="10"
         android:hint="Match #"
         android:inputType="number"
-        android:textColor="@color/design_default_color_surface"
-        android:textColorHint="#919191"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#989898"
         android:textSize="20sp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="#989898"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scoutNameI" />
+        app:layout_constraintTop_toBottomOf="@+id/scoutNameIbox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/matchNumI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/submitInfo"
@@ -246,7 +267,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/engaged"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/matchNumI" />
+        app:layout_constraintTop_toBottomOf="@+id/matchNumIbox" />
 
     <Button
         android:id="@+id/docked"
@@ -263,7 +284,7 @@
         app:layout_constraintBottom_toTopOf="@+id/community"
         app:layout_constraintEnd_toStartOf="@+id/engaged"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/matchNumI" />
+        app:layout_constraintTop_toBottomOf="@+id/matchNumIbox" />
 
     <Button
         android:id="@+id/engaged"
@@ -306,6 +327,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="15dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:background="@drawable/custom_dropdown"
         android:backgroundTint="@color/white"
         android:backgroundTintMode="add"
@@ -313,7 +335,7 @@
         app:layout_constraintBottom_toTopOf="@+id/docked"
         app:layout_constraintEnd_toStartOf="@+id/submitInfo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/matchNumI"
+        app:layout_constraintTop_toBottomOf="@+id/matchNumIbox"
         app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

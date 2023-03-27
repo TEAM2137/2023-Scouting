@@ -1,3 +1,12 @@
+<!--
+
+You are able to uncomment big blocks of code by highlighting it and pressing Ctrl + / or Cmd + /
+
+Make sure to completely comment out the color scheme you DON'T WANT! The one that is currently active
+will have Syntax Highlighting (word coloring).
+
+-->
+
 <!--Blue Color Scheme-->
 
 <resources xmlns:tools="http://schemas.android.com/tools">

@@ -67,7 +67,7 @@ public class DriverFragment extends Fragment {
         midCount = saveints.get(1);
         lowCount = saveints.get(2);
         linkCount = saveints.get(3);
-        textView.setText("Tele-Op - Blue 3 | " + saveteamString);
+        textView.setText("Tele-Op - (Color #) | " + saveteamString);
         coop = getDriverCoop();
 
         topScoreNum.setText("" + topCount);
