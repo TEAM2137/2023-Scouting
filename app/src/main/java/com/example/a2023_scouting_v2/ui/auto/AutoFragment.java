@@ -18,12 +18,15 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.a2023_scouting_v2.MainActivity;
 import com.example.a2023_scouting_v2.R;
 import com.example.a2023_scouting_v2.databinding.FragmentAutoBinding;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class AutoFragment extends Fragment {
     private FragmentAutoBinding binding;
@@ -59,9 +62,9 @@ public class AutoFragment extends Fragment {
 
         //Info TextEdits and Buttons
         Button submitInfo = binding.submitInfo;
-        EditText scoutNameI = binding.scoutNameI;
+        TextInputEditText scoutNameI = binding.scoutNameI;
         Spinner teamNumI = binding.teamNumI;
-        EditText matchNumI = binding.matchNumI;
+        TextInputEditText matchNumI = binding.matchNumI;
 
         //Top + & - buttons
         Button topPlusA = binding.topPlusA;

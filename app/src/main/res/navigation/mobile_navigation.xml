@@ -22,4 +22,10 @@
         android:name="com.example.a2023_scouting_v2.ui.endgame.EndgameFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_endgame" />
+
+    <fragment
+        android:id="@+id/navigation_data"
+        android:name="com.example.a2023_scouting_v2.ui.data.DataFragment"
+        android:label="data"
+        tools:layout="@layout/fragment_data" />
 </navigation>

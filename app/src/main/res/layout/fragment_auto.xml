@@ -25,83 +25,88 @@
     <Button
         android:id="@+id/topMinusA"
         android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="352dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="10dp"
         android:backgroundTint="@color/white"
         android:text="-"
         android:textColor="@color/design_default_color_background"
         android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/topButtonsText2"
         app:layout_constraintEnd_toStartOf="@+id/topScoreTA"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+        app:layout_constraintTop_toBottomOf="@+id/topButtonsText" />
 
     <Button
         android:id="@+id/topPlusA"
         android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="352dp"
-        android:layout_marginEnd="4dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="@color/white"
         android:text="+"
         android:textColor="@color/design_default_color_background"
         android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/topButtonsText2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/topScoreTA"
-        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+        app:layout_constraintTop_toTopOf="@+id/topMinusA"
+        tools:text="+" />
 
     <Button
         android:id="@+id/midMinusA"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
         android:backgroundTint="@color/white"
         android:text="-"
         android:textColor="@color/design_default_color_background"
         android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/topButtonsText3"
         app:layout_constraintEnd_toStartOf="@+id/midScoreTA"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topMinusA" />
+        app:layout_constraintTop_toBottomOf="@+id/topButtonsText2" />
 
     <Button
         android:id="@+id/lowPlusA"
         android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="@color/white"
         android:text="+"
         android:textColor="@color/design_default_color_background"
         android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lowMinusA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/lowScoreTA"
-        app:layout_constraintTop_toBottomOf="@+id/midPlusA" />
+        app:layout_constraintTop_toBottomOf="@+id/topButtonsText3" />
 
     <Button
         android:id="@+id/lowMinusA"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/white"
         android:text="-"
         android:textColor="@color/design_default_color_background"
         android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/lowScoreTA"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/midMinusA" />
+        app:layout_constraintTop_toBottomOf="@+id/topButtonsText3" />
 
     <TextView
         android:id="@+id/topScoreTA"
         android:layout_width="75dp"
         android:layout_height="73dp"
-        android:layout_marginTop="10dp"
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
         android:textSize="60sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/topMinusA"
         app:layout_constraintEnd_toStartOf="@+id/topPlusA"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/topMinusA"
@@ -111,35 +116,35 @@
         android:id="@+id/midScoreTA"
         android:layout_width="75dp"
         android:layout_height="73dp"
-        android:layout_marginTop="50dp"
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
         android:textSize="60sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/midMinusA"
         app:layout_constraintEnd_toStartOf="@+id/midPlusA"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/midMinusA"
-        app:layout_constraintTop_toBottomOf="@+id/topScoreTA" />
+        app:layout_constraintTop_toBottomOf="@+id/topButtonsText2" />
 
     <TextView
         android:id="@+id/lowScoreTA"
         android:layout_width="75dp"
         android:layout_height="73dp"
-        android:layout_marginTop="45dp"
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
         android:textSize="60sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/lowMinusA"
         app:layout_constraintEnd_toStartOf="@+id/lowPlusA"
         app:layout_constraintStart_toEndOf="@+id/lowMinusA"
-        app:layout_constraintTop_toBottomOf="@+id/midScoreTA" />
+        app:layout_constraintTop_toBottomOf="@+id/topButtonsText3" />
 
     <TextView
         android:id="@+id/topButtonsText3"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="20dp"
         android:layout_marginStart="16dp"
         android:text="Low Score"
         android:textColor="@color/design_default_color_background"
@@ -152,9 +157,8 @@
     <TextView
         android:id="@+id/topButtonsText"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="20dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="-5dp"
         android:text="High Score"
         android:textColor="@color/design_default_color_background"
         android:textSize="16sp"
@@ -168,7 +172,7 @@
     <TextView
         android:id="@+id/topButtonsText2"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="20dp"
         android:layout_marginStart="16dp"
         android:text="Middle Score"
         android:textColor="@color/design_default_color_background"
@@ -181,19 +185,21 @@
     <Button
         android:id="@+id/midPlusA"
         android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="@color/white"
         android:text="+"
         android:textColor="@color/design_default_color_background"
         android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/midMinusA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/midScoreTA"
-        app:layout_constraintTop_toBottomOf="@+id/topPlusA" />
+        app:layout_constraintTop_toTopOf="@+id/midMinusA" />
 
-    <EditText
-        android:id="@+id/scoutNameI"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/scoutNameIbox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="8dp"
@@ -202,16 +208,26 @@
         android:ems="10"
         android:hint="Scout Name"
         android:inputType="textPersonName"
-        android:textColor="@color/design_default_color_surface"
-        android:textColorHint="#919191"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#989898"
         android:textSize="20sp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="#989898"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textAutoTop" />
+        app:layout_constraintTop_toBottomOf="@+id/textAutoTop">
 
-    <EditText
-        android:id="@+id/matchNumI"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/scoutNameI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/matchNumIbox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="8dp"
@@ -220,13 +236,23 @@
         android:ems="10"
         android:hint="Match #"
         android:inputType="number"
-        android:textColor="@color/design_default_color_surface"
-        android:textColorHint="#919191"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#989898"
         android:textSize="20sp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="#989898"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scoutNameI" />
+        app:layout_constraintTop_toBottomOf="@+id/scoutNameIbox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/matchNumI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/submitInfo"
@@ -241,16 +267,16 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/engaged"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/matchNumI" />
+        app:layout_constraintTop_toBottomOf="@+id/matchNumIbox" />
 
     <Button
         android:id="@+id/docked"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="75dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:backgroundTint="@color/white"
         android:text="Docked"
         android:textColor="@color/design_default_color_background"
@@ -258,12 +284,12 @@
         app:layout_constraintBottom_toTopOf="@+id/community"
         app:layout_constraintEnd_toStartOf="@+id/engaged"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/matchNumI" />
+        app:layout_constraintTop_toBottomOf="@+id/matchNumIbox" />
 
     <Button
         android:id="@+id/engaged"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
@@ -279,16 +305,17 @@
     <Button
         android:id="@+id/community"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/white"
-        android:text="Community"
+        android:text="Mobility"
         android:textColor="@color/design_default_color_background"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/topMinusA"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/docked" />
 
@@ -300,6 +327,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="15dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:background="@drawable/custom_dropdown"
         android:backgroundTint="@color/white"
         android:backgroundTintMode="add"
@@ -307,7 +335,7 @@
         app:layout_constraintBottom_toTopOf="@+id/docked"
         app:layout_constraintEnd_toStartOf="@+id/submitInfo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/matchNumI"
+        app:layout_constraintTop_toBottomOf="@+id/matchNumIbox"
         app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

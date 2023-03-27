@@ -4,49 +4,51 @@
     <string name="title_home">Auto</string>
     <string name="title_dashboard">Tele-Op</string>
     <string name="title_notifications">Endgame</string>
+    <string name="title_data">Data</string>
+    <string name="data_warning">Do not press any buttons unless you know what you are doing</string>
+    <string name="dataActionBar">Data</string>
+    <string name="versionNum">2023 Scouting App v1.09 (Stable)</string>
 
     <string-array name="teams">
         <item>Select a Team</item>
-        <item>1</item>
-        <item>68</item>
-        <item>247</item>
-        <item>314</item>
-        <item>322</item>
+        <item>123</item>
         <item>453</item>
-        <item>494</item>
-        <item>830</item>
-        <item>1076</item>
-        <item>1188</item>
-        <item>1684</item>
-        <item>1718</item>
+        <item>818</item>
+        <item>1189</item>
+        <item>1701</item>
         <item>2137</item>
         <item>2604</item>
-        <item>3098</item>
-        <item>3534</item>
-        <item>3568</item>
-        <item>3667</item>
+        <item>3175</item>
+        <item>3302</item>
+        <item>3539</item>
+        <item>3619</item>
         <item>4779</item>
+        <item>4810</item>
         <item>4961</item>
         <item>5046</item>
-        <item>5114</item>
-        <item>5150</item>
-        <item>5166</item>
-        <item>5183</item>
-        <item>5235</item>
-        <item>5517</item>
-        <item>5533</item>
-        <item>5561</item>
-        <item>5603</item>
-        <item>5612</item>
+        <item>5225</item>
+        <item>5239</item>
+        <item>5460</item>
+        <item>5555</item>
         <item>5860</item>
+        <item>5901</item>
+        <item>5926</item>
+        <item>6077</item>
         <item>6085</item>
-        <item>6098</item>
-        <item>7192</item>
+        <item>6099</item>
+        <item>6120</item>
+        <item>6567</item>
+        <item>7224</item>
+        <item>7597</item>
         <item>7762</item>
-        <item>7772</item>
-        <item>8426</item>
-        <item>9237</item>
-        <item>9242</item>
-        <item></item>
+        <item>7813</item>
+        <item>8115</item>
+        <item>8364</item>
+        <item>8385</item>
+        <item>8826</item>
+        <item>9212</item>
+        <item>9245</item>
+        <item>9252</item>
+        <item>9255</item>
     </string-array>
 </resources>
