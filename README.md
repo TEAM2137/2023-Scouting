@@ -28,7 +28,7 @@ Gradle Version 7.5
 4. Click the run button
 
 &nbsp;
-## !Important!
+## ! Important !
 &nbsp;
 When updating the tablets you will need to change 4 different files to update tablet names and colors.
 &nbsp;
@@ -36,6 +36,7 @@ When updating the tablets you will need to change 4 different files to update ta
 2. AutoViewModel at line 13
 3. DriverFragment at line 70
 4. EndgameViewModel at line 18
+
 &nbsp;
 Change (Color #) to the tablet color and number. (Blue 1)
 In the themes file you will want to comment out the entire code block that contains the color scheme you DON'T WANT.
