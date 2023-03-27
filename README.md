@@ -32,10 +32,10 @@ Gradle Version 7.5
 &nbsp;
 When updating the tablets you will need to change 4 different files to update tablet names and colors.
 &nbsp;
-1. themes.xml
-2. AutoViewModel at line 13
-3. DriverFragment at line 70
-4. EndgameViewModel at line 18
+1. themes.xml (This changes the tablet color)
+2. AutoViewModel at line 13 (This changes the tablet name)
+3. DriverFragment at line 70 (This changes the tablet name)
+4. EndgameViewModel at line 18 (This changes the tablet name)
 
 &nbsp;
 Change (Color #) to the tablet color and number. (Blue 1)
