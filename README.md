@@ -91,7 +91,7 @@ Gradle Version 7.5
 
 
 ## Changing Tablet Name and Color
-When updating the tablets you will need to change lines in 4 different files to update tablet names and colors.
+When updating the tablets you will need to change lines in 5 different files to update tablet names and colors.
 ### Files
 1. themes.xml (This changes the tablet color)
 2. AutoViewModel at line 13 (This changes the tablet name)
