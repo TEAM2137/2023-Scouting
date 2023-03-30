@@ -38,12 +38,12 @@ Gradle Version 7.5
     ├── drawable-xxxhdpi
     ├── font
     ├── layout
-        ├── activity_main.xml << Do Not Modify
-        ├── custom_spinner.xml << Team Dropdown Theme File
-        ├── fragment_auto.xml << Auto Page
-        ├── fragment_data.xml << Data Page
-        ├── fragment_driver.xml << Driver Page
-        └── fragment_endgame.xml << Endgame Page
+        ├── activity_main.xml << Do Not Modify
+        ├── custom_spinner.xml << Team Dropdown Theme File
+        ├── fragment_auto.xml << Auto Page
+        ├── fragment_data.xml << Data Page
+        ├── fragment_driver.xml << Driver Page
+        └── fragment_endgame.xml << Endgame Page
     ├── menu
     ├── mipmap-anydpi-v26
     ├── mipmap-hdpi
@@ -53,10 +53,10 @@ Gradle Version 7.5
     ├── mipmap-xxxhdpi
     ├── navigation
     ├── values
-        ├── colors.xml << Do not change this file
-        ├── dimens.xml
-        ├── strings.xml << Teams list and app version number
-        └── themes.xml << This is the correct theming file
+        ├── colors.xml << Do not change this file
+        ├── dimens.xml
+        ├── strings.xml << Teams list and app version number
+        └── themes.xml << This is the correct theming file
     ├── values-night << This does not need to be changed
     └── xml
 ```
@@ -76,6 +76,7 @@ When updating the tablets you will need to change lines in 4 different files to 
 2. AutoViewModel at line 13 (This changes the tablet name)
 3. DriverFragment at line 70 (This changes the tablet name)
 4. EndgameViewModel at line 18 (This changes the tablet name)
+5. SaveData at line 95 & 77 (This changes data saved to a csv file)
 
 ### Lines
 
@@ -86,3 +87,14 @@ When updating the tablets you will need to change lines in 4 different files to 
 2. In the themes file you will want to comment out the entire code block that contains the color scheme you DON'T WANT.
    Make sure the color scheme you DO want has syntax highlighting (colored words) and the other theme has grayed out words.
    Make sure only ONE theme is enabled at a time.
+
+### Screenshots
+<center>Enable Blue Color Scheme</center>
+<hr/>
+
+![Blue Color Scheme](https://i.imgur.com/kU33Uxc.png)
+
+<center>Enable Red Color Scheme</center>
+<hr/>
+
+![Red Color Scheme](https://i.imgur.com/mdJigLx.png)
