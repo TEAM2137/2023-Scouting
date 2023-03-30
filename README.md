@@ -61,14 +61,35 @@ Gradle Version 7.5
     └── xml
 ```
 &nbsp;
-## How to run
+## Downloading and Running the project
 1. Download the zip file from the ustable (latest) branch on Github
 2. Unzip the folder anywhere and open the folder in android studio
-3. Plug in a tablet and wait for the name to appear in between the run configurations dropdown and run button.
-4. Click the run button and wait for the app to download and launch on the tablet.
-5. Once the app opens on the tablet it's safe to unplug
 
+<details>
+<summary><strong>Running on a tablet</strong></summary>
 &nbsp;
+
+3. Plug in a tablet to the laptop.
+4. Wait for the tablet name to appear in the devices dropdown.
+5. Click the run button and wait for the app to download and launch on the tablet.
+6. Once the app opens on the tablet it's safe to unplug.
+7. If you want to debug keep the tablet plugged in and open the run window in IntelliJ.
+   &nbsp;
+</details>
+
+<details>
+<summary><strong>Running virtually</strong></summary>
+&nbsp;
+
+3. Open the device manager.
+4. Click "Create device".
+5. Complete the device configuration.
+6. Click the device dropdown and select the newly created virtual device.
+7. Run the program.
+   &nbsp;
+</details>
+
+
 ## Changing Tablet Name and Color
 When updating the tablets you will need to change lines in 4 different files to update tablet names and colors.
 ### Files
